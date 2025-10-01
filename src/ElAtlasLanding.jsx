@@ -230,7 +230,7 @@ export default function ElAtlasLanding() {
               </li>
               <li>
                 <span className="text-neutral-400">WhatsApp: </span>
-                <a className="underline" href="https://wa.me/34951455043" target="_blank" rel="noreferrer">Enviar mensaje</a>
+                <a className="underline" href="https://wa.me/34" target="_blank" rel="noreferrer">Enviar mensaje</a>
               </li>
               <li>
                 <span className="text-neutral-400">Instagram: </span>
