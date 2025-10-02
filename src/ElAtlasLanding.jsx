@@ -312,7 +312,7 @@ export default function ElAtlasLanding() {
       ))}
     </ul>
   </section>
-))}
+}
                 </ul>
               </div>
             ))}
