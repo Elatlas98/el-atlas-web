@@ -15,117 +15,123 @@ export default function ElAtlasLanding() {
   ];
 
   const categorias = [
-  // ─────────────────── HAMBURGUESAS ───────────────────
+  // ───────────── HAMBURGUESAS ─────────────
   {
     nombre: "Hamburguesas",
+    headers: ["Normal", "Menú"],
     items: [
-      { nombre: "Atlas King", precio: "5,50 €", precioMenu: "7,50 €", descripcion: "Carne de Ternera, lechuga, tomate, cebolla, queso" },
-      { nombre: "León Doble", precio: "7,50 €", precioMenu: "9,50 €", descripcion: "Doble Ternera, doble queso, lechuga, tomate y cebolla" },
-      { nombre: "León Fit", precio: "5,50 €", precioMenu: "7,50 €", descripcion: "Carne de Pollo, lechuga, tomate, cebolla, queso" },
-      { nombre: "Crispy King", precio: "6,00 €", precioMenu: "8,00 €", descripcion: "Pollo crujiente, lechuga, tomate, cebolla, queso" },
-      { nombre: "Epica Huevo", precio: "6,50 €", precioMenu: "8,50 €", descripcion: "Carne de Ternera, lechuga, tomate, cebolla, huevo, queso" },
+      { nombre: "Atlas King", desc: "Carne de ternera, lechuga, tomate, cebolla, queso", precios: ["5,50 €", "7,50 €"] },
+      { nombre: "León Doble", desc: "Doble ternera, doble queso, lechuga, tomate, cebolla", precios: ["7,50 €", "9,50 €"] },
+      { nombre: "León Fit", desc: "Carne de pollo, lechuga, tomate, cebolla, queso", precios: ["5,50 €", "7,50 €"] },
+      { nombre: "Crispy King", desc: "Pollo crujiente, lechuga, tomate, cebolla, queso", precios: ["6,00 €", "8,00 €"] },
+      { nombre: "Épica Huevo", desc: "Carne de ternera, lechuga, tomate, cebolla, huevo, queso", precios: ["6,50 €", "8,50 €"] },
     ]
   },
 
-  // ─────────────────── CAMPEROS ───────────────────
+  // ───────────── CAMPEROS ─────────────
   {
     nombre: "Camperos",
+    headers: ["Normal", "Menú"],
     items: [
-      { nombre: "Pollo", precio: "5,50 €", precioMenu: "7,50 €", descripcion: "Filete de pollo, tomate, lechuga, queso, cebolla, mayonesa" },
-      { nombre: "El Atlas", precio: "6,50 €", precioMenu: "8,50 €", descripcion: "Pollo, tomate, lechuga, queso, huevo, cebolla, mayonesa" },
-      { nombre: "Shawarma", precio: "6,50 €", precioMenu: "8,50 €", descripcion: "Shawarma, tomate, lechuga, cebolla, salsa de yogur" },
-      { nombre: "Pinchito de Pollo", precio: "6,00 €", precioMenu: "8,00 €", descripcion: "Pinchito de pollo, lechuga, tomate, cebolla, queso" },
-      { nombre: "Jamón Halal", precio: "5,50 €", precioMenu: "7,50 €", descripcion: "Jamón halal, lechuga, tomate, cebolla, queso, mayonesa" },
-      { nombre: "Shawarma El Atlas", precio: "7,00 €", precioMenu: "9,00 €", descripcion: "Shawarma, tomate, lechuga, cebolla, huevo, salsa de yogur y queso" },
-      { nombre: "Atún", precio: "5,00 €", precioMenu: "7,00 €", descripcion: "Atún, lechuga, tomate, mayonesa" },
+      { nombre: "Pollo", desc: "Filete de pollo, tomate, lechuga, queso, cebolla, mayonesa", precios: ["5,50 €", "7,50 €"] },
+      { nombre: "El Atlas", desc: "Pollo, tomate, lechuga, queso, huevo, cebolla, mayonesa", precios: ["6,50 €", "8,50 €"] },
+      { nombre: "Shawarma", desc: "Shawarma, tomate, lechuga, cebolla, salsa de yogur", precios: ["6,50 €", "8,50 €"] },
+      { nombre: "Pinchito de Pollo", precios: ["6,00 €", "8,00 €"] },
+      { nombre: "Jamón Halal", precios: ["5,50 €", "7,50 €"] },
+      { nombre: "Shawarma El Atlas", desc: "Shawarma, tomate, lechuga, cebolla, huevo, salsa de yogur y queso", precios: ["7,00 €", "9,00 €"] },
+      { nombre: "Atún", desc: "Atún, lechuga, tomate, mayonesa", precios: ["5,00 €", "7,00 €"] },
     ]
   },
 
-  // ─────────────────── BOCADILLOS ───────────────────
+  // ───────────── BOCADILLOS ─────────────
   {
     nombre: "Bocadillos",
+    headers: ["Normal", "Menú"],
     items: [
-      { nombre: "Pollo", precio: "6,00 €", precioMenu: "8,00 €" },
-      { nombre: "Carne de Ternera", precio: "7,00 €", precioMenu: "9,00 €" },
-      { nombre: "Pinchito de Pollo", precio: "6,00 €", precioMenu: "8,00 €" },
-      { nombre: "Pinchito de Ternera", precio: "7,00 €", precioMenu: "9,50 €" },
-      { nombre: "Hígado de Ternera", precio: "7,00 €", precioMenu: "9,50 €" },
-      { nombre: "Vegetal", precio: "5,00 €", precioMenu: "7,00 €" },
-      { nombre: "Del Mar", precio: "7,00 €", precioMenu: "9,00 €" },
-      { nombre: "Atún", precio: "5,00 €", precioMenu: "7,00 €" },
+      { nombre: "Pollo", precios: ["6,00 €", "8,00 €"] },
+      { nombre: "Carne de Ternera", precios: ["7,00 €", "9,00 €"] },
+      { nombre: "Pinchito de Pollo", precios: ["6,00 €", "8,00 €"] },
+      { nombre: "Pinchito de Ternera", precios: ["7,00 €", "9,50 €"] },
+      { nombre: "Hígado de Ternera", precios: ["7,00 €", "9,50 €"] },
+      { nombre: "Vegetal", precios: ["5,00 €", "7,00 €"] },
+      { nombre: "Del Mar", precios: ["7,00 €", "9,00 €"] },
+      { nombre: "Atún", precios: ["5,00 €", "7,00 €"] },
     ]
   },
 
-  // ─────────────────── SHAWARMA ───────────────────
+  // ───────────── SHAWARMA ─────────────
   {
     nombre: "Shawarma",
+    headers: ["Normal", "Menú"],
     items: [
-      { nombre: "Rollo Ternera", precio: "7,00 €", precioMenu: "9,00 €" },
-      { nombre: "Rollo Pollo", precio: "6,00 €", precioMenu: "8,00 €" },
-      { nombre: "Pita Ternera", precio: "7,00 €", precioMenu: "9,00 €" },
-      { nombre: "Pita Pollo", precio: "6,00 €", precioMenu: "8,00 €" },
-      { nombre: "Rollo Mixto", precio: "7,50 €", precioMenu: "9,50 €" },
-      { nombre: "Pita Mixto", precio: "7,50 €", precioMenu: "9,50 €" },
-      { nombre: "Falafel (Rollo o Pita)", precio: "5,50 €", precioMenu: "7,50 €" },
-      { nombre: "Lahmacun", precio: "7,50 €", precioMenu: "9,50 €" },
+      { nombre: "Rollo Ternera", precios: ["7,00 €", "9,00 €"] },
+      { nombre: "Rollo Pollo", precios: ["6,00 €", "8,00 €"] },
+      { nombre: "Pita Ternera", precios: ["7,00 €", "9,00 €"] },
+      { nombre: "Pita Pollo", precios: ["6,00 €", "8,00 €"] },
+      { nombre: "Rollo Mixto", precios: ["7,50 €", "9,50 €"] },
+      { nombre: "Pita Mixto", precios: ["7,50 €", "9,50 €"] },
+      { nombre: "Falafel Rollo o Pita", precios: ["5,50 €", "7,50 €"] },
+      { nombre: "Lahmacun", precios: ["7,50 €", "9,50 €"] },
     ]
   },
 
-  // ─────────────────── TACOS ───────────────────
+  // ───────────── TACOS ─────────────
   {
     nombre: "Tacos",
+    headers: ["Normal", "Menú"],
     items: [
-      { nombre: "Taco de Pollo", precio: "7,00 €", precioMenu: "9,00 €" },
-      { nombre: "Taco de Nuggets", precio: "7,00 €", precioMenu: "9,00 €" },
-      { nombre: "Taco de Lagrimita", precio: "8,50 €", precioMenu: "10,00 €" },
-      { nombre: "Taco de Carne Picada", precio: "8,00 €", precioMenu: "10,00 €" },
-      { nombre: "Taco de Shawarma", precio: "8,00 €", precioMenu: "10,00 €" },
-      { nombre: "Taco Mixto (pollo y carne picada)", precio: "8,50 €", precioMenu: "10,50 €" },
-      { nombre: "Gratinado (+0,50 €)", precio: "+0,50 €" },
+      { nombre: "Taco de Pollo", precios: ["7,00 €", "9,00 €"] },
+      { nombre: "Taco de Nuggets", precios: ["7,00 €", "9,00 €"] },
+      { nombre: "Taco de Lagrimita", precios: ["8,50 €", "10,00 €"] },
+      { nombre: "Taco de Carne Picada", precios: ["8,00 €", "10,00 €"] },
+      { nombre: "Taco de Shawarma", precios: ["8,00 €", "10,00 €"] },
+      { nombre: "Taco Mixto (pollo y carne picada)", precios: ["8,50 €", "10,50 €"] },
+      { nombre: "Gratinado", desc: "(+0,50 €)", precios: ["+0,50 €", ""] },
     ]
   },
 
-  // ─────────────────── PIZZAS ───────────────────
+  // ───────────── PIZZAS ─────────────
   {
-    nombre: "Pizzas (Normal / Familiar)",
+    nombre: "Pizzas",
+    headers: ["Normal", "Familiar"],
     items: [
-      { nombre: "Atún", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Atún, tomate, mozzarella y cebolla" },
-      { nombre: "4 Quesos", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Mozzarella, roquefort, gouda, parmesano" },
-      { nombre: "Salmón", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Tomate, mozzarella, lonchas de salmón" },
-      { nombre: "Caprichosa", precioNormal: "7,50 €", precioFamiliar: "11,50 €", descripcion: "Tomate, mozzarella, champiñones, jamón halal, huevo" },
-      { nombre: "Barbacoa", precioNormal: "8,00 €", precioFamiliar: "12,00 €", descripcion: "Tomate, mozzarella, carne picada, jamón halal, salsa barbacoa" },
-      { nombre: "Campera", precioNormal: "8,50 €", precioFamiliar: "12,50 €", descripcion: "Tomate, mozzarella, carne picada, cebolla, huevo, pimiento rojo" },
-      { nombre: "Boloñesa", precioNormal: "7,50 €", precioFamiliar: "11,00 €", descripcion: "Tomate, mozzarella, carne picada" },
-      { nombre: "Hawai", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Tomate, mozzarella, piña, jamón halal" },
-      { nombre: "El Atlas", precioNormal: "8,50 €", precioFamiliar: "12,50 €", descripcion: "Tomate, mozzarella, carne de shawarma, champiñones, cebolla" },
-      { nombre: "Carbonara", precioNormal: "8,50 €", precioFamiliar: "12,50 €", descripcion: "Nata, mozzarella, bacon" },
-      { nombre: "Marinera", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Tomate, mozzarella, frutos del mar" },
-      { nombre: "Margarita", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Tomate y mozzarella" },
-      { nombre: "Fungi", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Tomate, mozzarella, champiñones" },
-      { nombre: "Vegetal", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Tomate, mozzarella, champiñones, pimientos, cebolla, aceitunas" },
-      { nombre: "Calzone", precioNormal: "8,50 €", precioFamiliar: "—", descripcion: "Tomate, mozzarella, carne de shawarma, champiñones, pimiento" },
-      { nombre: "Prosciutto", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Tomate, mozzarella, jamón halal" },
-      { nombre: "Peperoni", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Tomate, mozzarella, peperoni" },
-      { nombre: "Napolitana", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Tomate, mozzarella, anchoas, alcaparras, aceitunas" },
-      { nombre: "Shawarma", precioNormal: "8,00 €", precioFamiliar: "12,00 €", descripcion: "Tomate, mozzarella, carne de shawarma" },
-      { nombre: "Pan de Ajo", precioNormal: "6,00 €", precioFamiliar: "—", descripcion: "Tomate, queso, ajo" },
-      { nombre: "Ingredientes Extra", precioNormal: "+1,00 €", precioFamiliar: "+1,00 €" },
+      { nombre: "Atún", desc: "Atún, tomate, mozzarella y cebolla", precios: ["7,00 €", "11,00 €"] },
+      { nombre: "4 Quesos", desc: "Tomate, mozzarella, roquefort, gouda, parmesano", precios: ["7,00 €", "11,00 €"] },
+      { nombre: "Salmón", desc: "Tomate, mozzarella, lonchas de salmón", precios: ["7,00 €", "11,00 €"] },
+      { nombre: "Caprichosa", desc: "Tomate, mozzarella, champiñones, jamón halal, huevo", precios: ["7,50 €", "11,50 €"] },
+      { nombre: "Barbacoa", desc: "Tomate, mozzarella, carne picada, jamón halal, salsa barbacoa", precios: ["8,00 €", "12,00 €"] },
+      { nombre: "Campera", desc: "Tomate, mozzarella, carne picada, cebolla, huevo, pimiento rojo", precios: ["8,50 €", "12,50 €"] },
+      { nombre: "Boloñesa", desc: "Tomate, mozzarella, carne picada", precios: ["7,50 €", "11,00 €"] },
+      { nombre: "Hawai", desc: "Tomate, mozzarella, piña, jamón halal", precios: ["7,00 €", "11,00 €"] },
+      { nombre: "El Atlas", desc: "Tomate, mozzarella, carne de shawarma, champiñones, cebolla", precios: ["8,50 €", "12,50 €"] },
+      { nombre: "Carbonara", desc: "Nata, mozzarella, bacon", precios: ["8,50 €", "12,50 €"] },
+      { nombre: "Marinera", desc: "Tomate, mozzarella, frutos del mar", precios: ["7,00 €", "11,00 €"] },
+      { nombre: "Margarita", desc: "Tomate, mozzarella", precios: ["7,00 €", "11,00 €"] },
+      { nombre: "Fungi", desc: "Tomate, mozzarella, champiñones", precios: ["7,00 €", "11,00 €"] },
+      { nombre: "Vegetal", desc: "Tomate, mozzarella, champiñones, pimientos, cebolla, aceitunas", precios: ["7,00 €", "11,00 €"] },
+      { nombre: "Calzone", desc: "Tomate, mozzarella, carne de shawarma, champiñones, pimiento", precios: ["8,50 €", "—"] },
+      { nombre: "Prosciutto", desc: "Tomate, mozzarella, jamón halal", precios: ["7,00 €", "11,00 €"] },
+      { nombre: "Peperoni", desc: "Tomate, mozzarella, peperoni", precios: ["7,00 €", "11,00 €"] },
+      { nombre: "Napolitana", desc: "Tomate, mozzarella, anchoas, alcaparras, aceitunas", precios: ["7,00 €", "11,00 €"] },
+      { nombre: "Shawarma", desc: "Tomate, mozzarella, carne de shawarma", precios: ["8,00 €", "12,00 €"] },
+      { nombre: "Pan de Ajo", desc: "Tomate, queso, ajo", precios: ["6,00 €", "—"] },
+      { nombre: "Ingredientes Extra", precios: ["+1,00 €", "+1,00 €"] },
     ]
   },
 
-  // ─────────────────── ENSALADAS ───────────────────
+  // ───────────── ENSALADAS ─────────────
   {
     nombre: "Ensaladas",
     items: [
-      { nombre: "Mediterranea", precio: "6,00 €", descripcion: "Lechuga, tomate, cebolla, aceituna, atún, remolacha y espárragos" },
-      { nombre: "El Atlas", precio: "7,50 €", descripcion: "Lechuga, tomate, zanahoria, aceituna, mozzarella, maíz y jamón halal" },
-      { nombre: "Shawarma", precio: "8,00 €", descripcion: "Shawarma, lechuga, cebolla, zanahoria, maíz, salsa de yogur" },
-      { nombre: "Frutos del mar", precio: "8,00 €", descripcion: "Lechuga, gambas, bocas de mar, tomate, maíz, salsa rosa" },
-      { nombre: "César", precio: "7,50 €", descripcion: "Lechuga, tomate, queso parmesano, picatoste, pollo a la plancha o lagrimitas, salsa césar" },
+      { nombre: "Mediterranea", desc: "Lechuga, tomate, cebolla, aceituna, atún, remolacha y espárragos", precio: "6,00 €" },
+      { nombre: "El Atlas", desc: "Lechuga, tomate, zanahoria, aceituna, mozzarella, maíz y jamón halal", precio: "7,50 €" },
+      { nombre: "Shawarma", desc: "Shawarma, lechuga, cebolla, zanahoria, maíz, salsa de yogur", precio: "8,00 €" },
+      { nombre: "Frutos del mar", desc: "Lechuga, gambas, bocas de mar, tomate, maíz, salsa rosa", precio: "8,00 €" },
+      { nombre: "Cesar", desc: "Lechuga, tomate, queso parmesano, picatoste, pollo a la plancha o lagrimitas, salsa césar", precio: "7,50 €" },
     ]
   },
 
-  // ─────────────────── PLATOS COMBINADOS ───────────────────
+  // ───────────── PLATOS COMBINADOS ─────────────
   {
     nombre: "Platos Combinados",
     items: [
@@ -134,10 +140,8 @@ export default function ElAtlasLanding() {
       { nombre: "Kapsalon Shawarma", precio: "8,00 €" },
       {
         nombre: "Plato Combinado Mixto X2",
-        precio: "9,50 €",
-        descripcion: "Elige 2: Shawarma, Filete de Pollo, Pinchito Pollo, Pinchito Ternera o Pinchito Hígado",
-        opcionesMix: ["Shawarma", "Filete de Pollo", "Pinchito Pollo", "Pinchito Ternera", "Pinchito Hígado"],
-        maxSeleccion: 2
+        desc: "Elige 2: Pinchito (Hígado, Ternera o Pollo) • o Shawarma • o Filete de Pollo",
+        precio: "9,50 €"
       },
       { nombre: "Plato Pinchito Pollo", precio: "8,50 €" },
       { nombre: "Plato Pinchito Ternera", precio: "9,50 €" },
@@ -145,7 +149,7 @@ export default function ElAtlasLanding() {
     ]
   },
 
-  // ─────────────────── COMPLEMENTOS Y BEBIDAS ───────────────────
+  // ───────────── COMPLEMENTOS Y BEBIDAS ─────────────
   {
     nombre: "Complementos y Bebidas",
     items: [
@@ -162,7 +166,6 @@ export default function ElAtlasLanding() {
     ]
   },
 ];
-
   return (
     <div className="min-h-screen w-full text-white bg-neutral-950">
       <div
@@ -269,22 +272,47 @@ export default function ElAtlasLanding() {
           </div>
 
           <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {categorias.map((cat) => (
-              <div key={cat.nombre} className="rounded-2xl bg-neutral-900/70 border border-neutral-800 p-5 shadow-lg">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xl font-bold">{cat.nombre}</h3>
-                  <span className="inline-block h-2 w-2 rounded-full bg-red-500" />
-                </div>
-                <ul className="space-y-3">
-                  {cat.items.map((it) => (
-                    <li key={it.nombre} className="grid grid-cols-[1fr_auto] gap-3">
-                      <div>
-                        <p className="font-medium">{it.nombre}</p>
-                        <p className="text-sm text-neutral-400">{it.desc}</p>
-                      </div>
-                      <span className="text-neutral-400 tabular-nums">{it.precio || "—"}</span>
-                    </li>
-                  ))}
+            function Precios({ item, headers }) {
+  // Si la categoría tiene dos columnas (Normal/Menú o Normal/Familiar)
+  if (headers && item.precios) {
+    return (
+      <div className="flex items-center gap-3">
+        <span className="tabular-nums">{item.precios[0]}</span>
+        <span className="opacity-60">·</span>
+        <span className="tabular-nums">{item.precios[1]}</span>
+      </div>
+    );
+  }
+  // Si es precio único
+  return <span className="tabular-nums">{item.precio || ""}</span>;
+}
+
+// Dentro del map de categorías:
+{categorias.map(cat => (
+  <section key={cat.nombre} className="card">
+    <div className="flex items-baseline justify-between mb-2">
+      <h3 className="text-xl font-semibold">{cat.nombre}</h3>
+      {cat.headers && (
+        <div className="text-sm opacity-70 flex gap-6">
+          <span>{cat.headers[0]}</span>
+          <span>{cat.headers[1]}</span>
+        </div>
+      )}
+    </div>
+
+    <ul className="space-y-2">
+      {cat.items.map(it => (
+        <li key={it.nombre} className="flex justify-between gap-4">
+          <div>
+            <div className="font-medium">{it.nombre}</div>
+            {it.desc && <div className="text-sm opacity-70">{it.desc}</div>}
+          </div>
+          <Precios item={it} headers={cat.headers} />
+        </li>
+      ))}
+    </ul>
+  </section>
+))}
                 </ul>
               </div>
             ))}
