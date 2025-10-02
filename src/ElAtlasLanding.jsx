@@ -3,6 +3,7 @@ import { useState } from "react";
 export default function ElAtlasLanding() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  // ——————————————————— CARTA COMPLETA ———————————————————
   const categorias = [
     // HAMBURGUESAS
     {
@@ -148,18 +149,24 @@ export default function ElAtlasLanding() {
     if (headers && item.precios) {
       return (
         <div style={{ display: "grid", gridTemplateColumns: "auto auto", gap: "1.25rem", minWidth: 140, textAlign: "right" }}>
-          <span>{item.precios[0]}</span>
-          <span>{item.precios[1]}</span>
+          <span className="tabular-nums">{item.precios[0]}</span>
+          <span className="tabular-nums">{item.precios[1]}</span>
         </div>
       );
     }
-    return <span>{item.precio || ""}</span>;
+    return <span className="tabular-nums">{item.precio || ""}</span>;
   }
 
   return (
-    <main className="max-w-5xl mx-auto px-4 py-8 text-white">
-      {/* Cabecera */}
-      <header className="mb-8 text-center">
+    <div className="min-h-screen w-full text-white bg-neutral-950">
+      {/* Fondo tenue */}
+      <div className="fixed inset-0 -z-10 opacity-20" style={{
+        backgroundImage: "linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(https://images.unsplash.com/photo-1600566753190-17f0baa2c768?q=80&w=1800&auto=format&fit=crop)",
+        backgroundSize: "cover", backgroundPosition: "center"
+      }} />
+
+      {/* Cabecera compacta */}
+      <header className="mb-8 text-center pt-8">
         <h1 className="text-3xl font-bold">El Atlas</h1>
         <p className="opacity-80">Hamburguesas · Tacos · Pizzas · Bocadillos · Camperos · Shawarma · Ensaladas</p>
         <p className="mt-2 text-lg">📞 Llamadas: <a href="tel:+34951455043" className="underline">951 455 043</a></p>
@@ -170,33 +177,76 @@ export default function ElAtlasLanding() {
       </header>
 
       {/* MENÚ */}
-      <section id="menu" className="space-y-8">
-        {categorias.map((cat) => (
-          <article key={cat.nombre} className="bg-[#151515] border border-[#2a2a2a] rounded-xl p-5">
-            <div className="flex items-baseline justify-between mb-3 gap-4">
-              <h3 className="text-xl font-semibold">{cat.nombre}</h3>
-              {cat.headers && (
-                <div className="text-sm opacity-75" style={{ display: "grid", gridTemplateColumns: "auto auto", gap: "1.25rem", minWidth: 140, textAlign: "right" }}>
-                  <span>{cat.headers[0]}</span>
-                  <span>{cat.headers[1]}</span>
-                </div>
-              )}
-            </div>
-
-            <ul className="space-y-3">
-              {cat.items.map((it) => (
-                <li key={it.nombre} className="flex items-start justify-between gap-4">
-                  <div>
-                    <div className="font-medium">{it.nombre}</div>
-                    {it.desc && <div className="text-sm opacity-70">{it.desc}</div>}
+      <main className="max-w-6xl mx-auto px-4 pb-6">
+        <section id="menu" className="space-y-8">
+          {categorias.map((cat) => (
+            <article key={cat.nombre} className="rounded-2xl bg-neutral-900/70 border border-neutral-800 p-5 shadow-lg">
+              <div className="flex items-baseline justify-between mb-3 gap-4">
+                <h3 className="text-2xl font-bold">{cat.nombre}</h3>
+                {cat.headers && (
+                  <div className="grid grid-cols-2 gap-5 min-w-[140px] text-right text-sm text-neutral-400">
+                    <span>{cat.headers[0]}</span>
+                    <span>{cat.headers[1]}</span>
                   </div>
-                  <Precios item={it} headers={cat.headers} />
-                </li>
-              ))}
+                )}
+              </div>
+              <ul className="divide-y divide-neutral-800/70">
+                {cat.items.map((it) => (
+                  <li key={it.nombre} className="py-3 flex items-start justify-between gap-4">
+                    <div>
+                      <p className="font-medium">{it.nombre}</p>
+                      {it.desc && <p className="text-sm text-neutral-400">{it.desc}</p>}
+                    </div>
+                    <Precios item={it} headers={cat.headers} />
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </section>
+
+        {/* CONTACTO & MAPA */}
+        <section id="contacto" className="mt-12 grid md:grid-cols-2 gap-6">
+          {/* Tarjeta de contacto */}
+          <div className="rounded-2xl bg-neutral-900/70 border border-neutral-800 p-6">
+            <h3 className="text-2xl font-bold mb-3">Contacto</h3>
+            <ul className="space-y-2 text-neutral-200">
+              <li>📞 <span className="text-neutral-400">Llamadas:</span> <a className="underline" href="tel:+34951455043">951 455 043</a></li>
+              <li>💬 <span className="text-neutral-400">WhatsApp pedidos:</span> <a className="underline" href="https://wa.me/34647371605" target="_blank" rel="noreferrer">647 371 605</a></li>
+              <li>📍 <span className="text-neutral-400">Dirección:</span> Calle Eduardo Aguilera Romero n°14</li>
+              <li>🕒 <span className="text-neutral-400">Horario:</span> Mar–Dom 18:00–01:45 (Lunes cerrado)</li>
+              <li>🛵 <span className="text-neutral-400">Reparto:</span> 19:30–23:45</li>
             </ul>
-          </article>
-        ))}
-      </section>
-    </main>
+            <div className="mt-4 flex gap-3">
+              <a href="tel:+34951455043" className="px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 font-semibold">Llamar</a>
+              <a href="https://wa.me/34647371605?text=Hola,%20quiero%20hacer%20un%20pedido%20en%20El%20Atlas" target="_blank" rel="noreferrer" className="px-4 py-2 rounded-lg bg-white text-black font-semibold hover:bg-neutral-200">WhatsApp</a>
+            </div>
+          </div>
+
+          {/* Mapa */}
+          <div className="rounded-2xl overflow-hidden border border-neutral-800 shadow-xl">
+            <iframe
+              title="Ubicación El Atlas"
+              width="100%"
+              height="320"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              src={`https://www.google.com/maps?q=${encodeURIComponent("Calle Eduardo Aguilera Romero 14")}&output=embed`}
+            />
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="border-t border-neutral-800 mt-10">
+        <div className="max-w-6xl mx-auto px-4 py-10 text-sm text-neutral-400 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p>© {new Date().getFullYear()} El Atlas • Todos los derechos reservados</p>
+          <div className="flex items-center gap-4">
+            <a href="#menu" className="underline">Menú</a>
+            <a href="#contacto" className="underline">Contacto</a>
+          </div>
+        </div>
+      </footer>
+    </div>
   );
 }
