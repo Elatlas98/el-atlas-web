@@ -3,11 +3,8 @@ import { useState } from "react";
 export default function ElAtlasLanding() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // ─────────────────────────────────────────────────────────────────────────────
-  // CARTA COMPLETA (precios exactos de tu carta)
-  // ─────────────────────────────────────────────────────────────────────────────
   const categorias = [
-    // ───────────── HAMBURGUESAS ─────────────
+    // HAMBURGUESAS
     {
       nombre: "Hamburguesas",
       headers: ["Normal", "Menú"],
@@ -19,8 +16,7 @@ export default function ElAtlasLanding() {
         { nombre: "Épica Huevo", desc: "Carne de ternera, lechuga, tomate, cebolla, huevo, queso", precios: ["6,50 €", "8,50 €"] },
       ],
     },
-
-    // ───────────── CAMPEROS ─────────────
+    // CAMPEROS
     {
       nombre: "Camperos",
       headers: ["Normal", "Menú"],
@@ -34,8 +30,7 @@ export default function ElAtlasLanding() {
         { nombre: "Atún", desc: "Atún, lechuga, tomate, mayonesa", precios: ["5,00 €", "7,00 €"] },
       ],
     },
-
-    // ───────────── BOCADILLOS ─────────────
+    // BOCADILLOS
     {
       nombre: "Bocadillos",
       headers: ["Normal", "Menú"],
@@ -50,8 +45,7 @@ export default function ElAtlasLanding() {
         { nombre: "Atún", precios: ["5,00 €", "7,00 €"] },
       ],
     },
-
-    // ───────────── SHAWARMA ─────────────
+    // SHAWARMA
     {
       nombre: "Shawarma",
       headers: ["Normal", "Menú"],
@@ -66,8 +60,7 @@ export default function ElAtlasLanding() {
         { nombre: "Lahmacun", precios: ["7,50 €", "9,50 €"] },
       ],
     },
-
-    // ───────────── TACOS ─────────────
+    // TACOS
     {
       nombre: "Tacos",
       headers: ["Normal", "Menú"],
@@ -81,67 +74,59 @@ export default function ElAtlasLanding() {
         { nombre: "Gratinado", desc: "(+0,50 €)", precios: ["+0,50 €", ""] },
       ],
     },
-
-    // ───────────── PIZZAS ─────────────
+    // PIZZAS
     {
       nombre: "Pizzas",
       headers: ["Normal", "Familiar"],
       items: [
-        { nombre: "Atún", desc: "Atún, tomate, mozzarella y cebolla", precios: ["7,00 €", "11,00 €"] },
-        { nombre: "4 Quesos", desc: "Tomate, mozzarella, roquefort, gouda, parmesano", precios: ["7,00 €", "11,00 €"] },
-        { nombre: "Salmón", desc: "Tomate, mozzarella, lonchas de salmón", precios: ["7,00 €", "11,00 €"] },
-        { nombre: "Caprichosa", desc: "Tomate, mozzarella, champiñones, jamón halal, huevo", precios: ["7,50 €", "11,50 €"] },
-        { nombre: "Barbacoa", desc: "Tomate, mozzarella, carne picada, jamón halal, salsa barbacoa", precios: ["8,00 €", "12,00 €"] },
-        { nombre: "Campera", desc: "Tomate, mozzarella, carne picada, cebolla, huevo, pimiento rojo", precios: ["8,50 €", "12,50 €"] },
-        { nombre: "Boloñesa", desc: "Tomate, mozzarella, carne picada", precios: ["7,50 €", "11,00 €"] },
-        { nombre: "Hawai", desc: "Tomate, mozzarella, piña, jamón halal", precios: ["7,00 €", "11,00 €"] },
-        { nombre: "El Atlas", desc: "Tomate, mozzarella, carne de shawarma, champiñones, cebolla", precios: ["8,50 €", "12,50 €"] },
-        { nombre: "Carbonara", desc: "Nata, mozzarella, bacon", precios: ["8,50 €", "12,50 €"] },
-        { nombre: "Marinera", desc: "Tomate, mozzarella, frutos del mar", precios: ["7,00 €", "11,00 €"] },
-        { nombre: "Margarita", desc: "Tomate, mozzarella", precios: ["7,00 €", "11,00 €"] },
-        { nombre: "Fungi", desc: "Tomate, mozzarella, champiñones", precios: ["7,00 €", "11,00 €"] },
-        { nombre: "Vegetal", desc: "Tomate, mozzarella, champiñones, pimientos, cebolla, aceitunas", precios: ["7,00 €", "11,00 €"] },
-        { nombre: "Calzone", desc: "Tomate, mozzarella, carne de shawarma, champiñones, pimiento", precios: ["8,50 €", "—"] },
-        { nombre: "Prosciutto", desc: "Tomate, mozzarella, jamón halal", precios: ["7,00 €", "11,00 €"] },
-        { nombre: "Peperoni", desc: "Tomate, mozzarella, peperoni", precios: ["7,00 €", "11,00 €"] },
-        { nombre: "Napolitana", desc: "Tomate, mozzarella, anchoas, alcaparras, aceitunas", precios: ["7,00 €", "11,00 €"] },
-        { nombre: "Shawarma", desc: "Tomate, mozzarella, carne de shawarma", precios: ["8,00 €", "12,00 €"] },
-        { nombre: "Pan de Ajo", desc: "Tomate, queso, ajo", precios: ["6,00 €", "—"] },
+        { nombre: "Atún", precios: ["7,00 €", "11,00 €"] },
+        { nombre: "4 Quesos", precios: ["7,00 €", "11,00 €"] },
+        { nombre: "Salmón", precios: ["7,00 €", "11,00 €"] },
+        { nombre: "Caprichosa", precios: ["7,50 €", "11,50 €"] },
+        { nombre: "Barbacoa", precios: ["8,00 €", "12,00 €"] },
+        { nombre: "Campera", precios: ["8,50 €", "12,50 €"] },
+        { nombre: "Boloñesa", precios: ["7,50 €", "11,00 €"] },
+        { nombre: "Hawai", precios: ["7,00 €", "11,00 €"] },
+        { nombre: "El Atlas", precios: ["8,50 €", "12,50 €"] },
+        { nombre: "Carbonara", precios: ["8,50 €", "12,50 €"] },
+        { nombre: "Marinera", precios: ["7,00 €", "11,00 €"] },
+        { nombre: "Margarita", precios: ["7,00 €", "11,00 €"] },
+        { nombre: "Fungi", precios: ["7,00 €", "11,00 €"] },
+        { nombre: "Vegetal", precios: ["7,00 €", "11,00 €"] },
+        { nombre: "Calzone", precios: ["8,50 €", "—"] },
+        { nombre: "Prosciutto", precios: ["7,00 €", "11,00 €"] },
+        { nombre: "Peperoni", precios: ["7,00 €", "11,00 €"] },
+        { nombre: "Napolitana", precios: ["7,00 €", "11,00 €"] },
+        { nombre: "Shawarma", precios: ["8,00 €", "12,00 €"] },
+        { nombre: "Pan de Ajo", precios: ["6,00 €", "—"] },
         { nombre: "Ingredientes Extra", precios: ["+1,00 €", "+1,00 €"] },
       ],
     },
-
-    // ───────────── ENSALADAS ─────────────
+    // ENSALADAS
     {
       nombre: "Ensaladas",
       items: [
-        { nombre: "Mediterranea", desc: "Lechuga, tomate, cebolla, aceituna, atún, remolacha y espárragos", precio: "6,00 €" },
-        { nombre: "El Atlas", desc: "Lechuga, tomate, zanahoria, aceituna, mozzarella, maíz y jamón halal", precio: "7,50 €" },
-        { nombre: "Shawarma", desc: "Shawarma, lechuga, cebolla, zanahoria, maíz, salsa de yogur", precio: "8,00 €" },
-        { nombre: "Frutos del mar", desc: "Lechuga, gambas, bocas de mar, tomate, maíz, salsa rosa", precio: "8,00 €" },
-        { nombre: "Cesar", desc: "Lechuga, tomate, queso parmesano, picatoste, pollo a la plancha o lagrimitas, salsa césar", precio: "7,50 €" },
+        { nombre: "Mediterranea", precio: "6,00 €" },
+        { nombre: "El Atlas", precio: "7,50 €" },
+        { nombre: "Shawarma", precio: "8,00 €" },
+        { nombre: "Frutos del mar", precio: "8,00 €" },
+        { nombre: "Cesar", precio: "7,50 €" },
       ],
     },
-
-    // ───────────── PLATOS COMBINADOS ─────────────
+    // PLATOS COMBINADOS
     {
       nombre: "Platos Combinados",
       items: [
         { nombre: "Plato Shawarma", precio: "9,00 €" },
         { nombre: "Plato de Filete de Pollo", precio: "8,50 €" },
         { nombre: "Kapsalon Shawarma", precio: "8,00 €" },
-        {
-          nombre: "Plato Combinado Mixto X2",
-          desc: "Elige 2: Pinchito (Hígado, Ternera o Pollo) • o Shawarma • o Filete de Pollo",
-          precio: "9,50 €",
-        },
+        { nombre: "Plato Combinado Mixto X2", precio: "9,50 €" },
         { nombre: "Plato Pinchito Pollo", precio: "8,50 €" },
         { nombre: "Plato Pinchito Ternera", precio: "9,50 €" },
         { nombre: "Plato Pinchito Hígado", precio: "9,00 €" },
       ],
     },
-
-    // ───────────── COMPLEMENTOS Y BEBIDAS ─────────────
+    // COMPLEMENTOS
     {
       nombre: "Complementos y Bebidas",
       items: [
@@ -159,27 +144,29 @@ export default function ElAtlasLanding() {
     },
   ];
 
-  // ─────────────────────────────────────────────────────────────────────────────
-  // COMPONENTES DE RENDER
-  // ─────────────────────────────────────────────────────────────────────────────
   function Precios({ item, headers }) {
     if (headers && item.precios) {
       return (
         <div style={{ display: "grid", gridTemplateColumns: "auto auto", gap: "1.25rem", minWidth: 140, textAlign: "right" }}>
-          <span className="tabular-nums">{item.precios[0]}</span>
-          <span className="tabular-nums">{item.precios[1]}</span>
+          <span>{item.precios[0]}</span>
+          <span>{item.precios[1]}</span>
         </div>
       );
     }
-    return <span className="tabular-nums">{item.precio || ""}</span>;
+    return <span>{item.precio || ""}</span>;
   }
 
   return (
     <main className="max-w-5xl mx-auto px-4 py-8 text-white">
-      {/* Cabecera simple */}
-      <header className="mb-8">
+      {/* Cabecera */}
+      <header className="mb-8 text-center">
         <h1 className="text-3xl font-bold">El Atlas</h1>
-        <p className="opacity-80">Hamburguesas, tacos, pizzas, bocadillos, camperos, shawarma y ensaladas.</p>
+        <p className="opacity-80">Hamburguesas · Tacos · Pizzas · Bocadillos · Camperos · Shawarma · Ensaladas</p>
+        <p className="mt-2 text-lg">📞 Llamadas: <a href="tel:+34951455043" className="underline">951 455 043</a></p>
+        <p className="mt-1 text-lg">💬 WhatsApp pedidos: <a href="https://wa.me/34647371605" className="underline">647 371 605</a></p>
+        <p className="mt-3">📍 Calle Eduardo Aguilera Romero n°14</p>
+        <p className="mt-1">🕒 Horario: Martes a Domingo 18:00 – 01:45 (Lunes cerrado)</p>
+        <p className="mt-1">🛵 Reparto a domicilio: 19:30 – 23:45</p>
       </header>
 
       {/* MENÚ */}
