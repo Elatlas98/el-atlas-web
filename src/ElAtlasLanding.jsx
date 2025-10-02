@@ -15,66 +15,153 @@ export default function ElAtlasLanding() {
   ];
 
   const categorias = [
-    {
-      nombre: "Hamburguesas",
-      items: [
-        { nombre: "Clásica El Atlas", desc: "Ternera, cheddar, lechuga, tomate, salsa de la casa", precio: "" },
-        { nombre: "BBQ León", desc: "Doble carne, bacon, cebolla crujiente, bbq", precio: "" },
-      ],
-    },
-    {
-      nombre: "Tacos",
-      items: [
-        { nombre: "Taco Pastor", desc: "Cerdo adobado, piña, cebolla, cilantro", precio: "" },
-        { nombre: "Taco Pollo", desc: "Pollo marinado, pico de gallo, crema", precio: "" },
-      ],
-    },
-    {
-      nombre: "Alitas",
-      items: [
-        { nombre: "Alitas BBQ", desc: "Salsa bbq de la casa", precio: "" },
-        { nombre: "Alitas Picantes", desc: "Salsa hot con toque de miel", precio: "" },
-      ],
-    },
-    {
-      nombre: "Pizzas",
-      items: [
-        { nombre: "Margarita", desc: "Salsa, mozzarella, albahaca", precio: "" },
-        { nombre: "Pepperoni", desc: "Mozzarella y pepperoni", precio: "" },
-      ],
-    },
-    {
-      nombre: "Bocadillos",
-      items: [
-        { nombre: "Lomo Queso", desc: "Lomo, queso fundido, alioli", precio: "" },
-        { nombre: "Vegetal", desc: "Atún, lechuga, tomate, huevo", precio: "" },
-      ],
-    },
-    {
-      nombre: "Camperos",
-      items: [
-        { nombre: "Campero Pollo", desc: "Pollo, lechuga, tomate, mayonesa", precio: "" },
-      ],
-    },
-    {
-      nombre: "Shawarma",
-      items: [
-        { nombre: "Shawarma Mixto", desc: "Ternera y pollo, salsas al gusto", precio: "" },
-      ],
-    },
-    {
-      nombre: "Ensaladas",
-      items: [
-        { nombre: "César", desc: "Lechuga, pollo, parmesano, crutones, salsa césar", precio: "" },
-      ],
-    },
-    {
-      nombre: "Menús",
-      items: [
-        { nombre: "Menú Burger", desc: "Burger + patatas + bebida", precio: "" },
-      ],
-    },
-  ];
+  // ─────────────────── HAMBURGUESAS ───────────────────
+  {
+    nombre: "Hamburguesas",
+    items: [
+      { nombre: "Atlas King", precio: "5,50 €", precioMenu: "7,50 €", descripcion: "Carne de Ternera, lechuga, tomate, cebolla, queso" },
+      { nombre: "León Doble", precio: "7,50 €", precioMenu: "9,50 €", descripcion: "Doble Ternera, doble queso, lechuga, tomate y cebolla" },
+      { nombre: "León Fit", precio: "5,50 €", precioMenu: "7,50 €", descripcion: "Carne de Pollo, lechuga, tomate, cebolla, queso" },
+      { nombre: "Crispy King", precio: "6,00 €", precioMenu: "8,00 €", descripcion: "Pollo crujiente, lechuga, tomate, cebolla, queso" },
+      { nombre: "Epica Huevo", precio: "6,50 €", precioMenu: "8,50 €", descripcion: "Carne de Ternera, lechuga, tomate, cebolla, huevo, queso" },
+    ]
+  },
+
+  // ─────────────────── CAMPEROS ───────────────────
+  {
+    nombre: "Camperos",
+    items: [
+      { nombre: "Pollo", precio: "5,50 €", precioMenu: "7,50 €", descripcion: "Filete de pollo, tomate, lechuga, queso, cebolla, mayonesa" },
+      { nombre: "El Atlas", precio: "6,50 €", precioMenu: "8,50 €", descripcion: "Pollo, tomate, lechuga, queso, huevo, cebolla, mayonesa" },
+      { nombre: "Shawarma", precio: "6,50 €", precioMenu: "8,50 €", descripcion: "Shawarma, tomate, lechuga, cebolla, salsa de yogur" },
+      { nombre: "Pinchito de Pollo", precio: "6,00 €", precioMenu: "8,00 €", descripcion: "Pinchito de pollo, lechuga, tomate, cebolla, queso" },
+      { nombre: "Jamón Halal", precio: "5,50 €", precioMenu: "7,50 €", descripcion: "Jamón halal, lechuga, tomate, cebolla, queso, mayonesa" },
+      { nombre: "Shawarma El Atlas", precio: "7,00 €", precioMenu: "9,00 €", descripcion: "Shawarma, tomate, lechuga, cebolla, huevo, salsa de yogur y queso" },
+      { nombre: "Atún", precio: "5,00 €", precioMenu: "7,00 €", descripcion: "Atún, lechuga, tomate, mayonesa" },
+    ]
+  },
+
+  // ─────────────────── BOCADILLOS ───────────────────
+  {
+    nombre: "Bocadillos",
+    items: [
+      { nombre: "Pollo", precio: "6,00 €", precioMenu: "8,00 €" },
+      { nombre: "Carne de Ternera", precio: "7,00 €", precioMenu: "9,00 €" },
+      { nombre: "Pinchito de Pollo", precio: "6,00 €", precioMenu: "8,00 €" },
+      { nombre: "Pinchito de Ternera", precio: "7,00 €", precioMenu: "9,50 €" },
+      { nombre: "Hígado de Ternera", precio: "7,00 €", precioMenu: "9,50 €" },
+      { nombre: "Vegetal", precio: "5,00 €", precioMenu: "7,00 €" },
+      { nombre: "Del Mar", precio: "7,00 €", precioMenu: "9,00 €" },
+      { nombre: "Atún", precio: "5,00 €", precioMenu: "7,00 €" },
+    ]
+  },
+
+  // ─────────────────── SHAWARMA ───────────────────
+  {
+    nombre: "Shawarma",
+    items: [
+      { nombre: "Rollo Ternera", precio: "7,00 €", precioMenu: "9,00 €" },
+      { nombre: "Rollo Pollo", precio: "6,00 €", precioMenu: "8,00 €" },
+      { nombre: "Pita Ternera", precio: "7,00 €", precioMenu: "9,00 €" },
+      { nombre: "Pita Pollo", precio: "6,00 €", precioMenu: "8,00 €" },
+      { nombre: "Rollo Mixto", precio: "7,50 €", precioMenu: "9,50 €" },
+      { nombre: "Pita Mixto", precio: "7,50 €", precioMenu: "9,50 €" },
+      { nombre: "Falafel (Rollo o Pita)", precio: "5,50 €", precioMenu: "7,50 €" },
+      { nombre: "Lahmacun", precio: "7,50 €", precioMenu: "9,50 €" },
+    ]
+  },
+
+  // ─────────────────── TACOS ───────────────────
+  {
+    nombre: "Tacos",
+    items: [
+      { nombre: "Taco de Pollo", precio: "7,00 €", precioMenu: "9,00 €" },
+      { nombre: "Taco de Nuggets", precio: "7,00 €", precioMenu: "9,00 €" },
+      { nombre: "Taco de Lagrimita", precio: "8,50 €", precioMenu: "10,00 €" },
+      { nombre: "Taco de Carne Picada", precio: "8,00 €", precioMenu: "10,00 €" },
+      { nombre: "Taco de Shawarma", precio: "8,00 €", precioMenu: "10,00 €" },
+      { nombre: "Taco Mixto (pollo y carne picada)", precio: "8,50 €", precioMenu: "10,50 €" },
+      { nombre: "Gratinado (+0,50 €)", precio: "+0,50 €" },
+    ]
+  },
+
+  // ─────────────────── PIZZAS ───────────────────
+  {
+    nombre: "Pizzas (Normal / Familiar)",
+    items: [
+      { nombre: "Atún", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Atún, tomate, mozzarella y cebolla" },
+      { nombre: "4 Quesos", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Mozzarella, roquefort, gouda, parmesano" },
+      { nombre: "Salmón", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Tomate, mozzarella, lonchas de salmón" },
+      { nombre: "Caprichosa", precioNormal: "7,50 €", precioFamiliar: "11,50 €", descripcion: "Tomate, mozzarella, champiñones, jamón halal, huevo" },
+      { nombre: "Barbacoa", precioNormal: "8,00 €", precioFamiliar: "12,00 €", descripcion: "Tomate, mozzarella, carne picada, jamón halal, salsa barbacoa" },
+      { nombre: "Campera", precioNormal: "8,50 €", precioFamiliar: "12,50 €", descripcion: "Tomate, mozzarella, carne picada, cebolla, huevo, pimiento rojo" },
+      { nombre: "Boloñesa", precioNormal: "7,50 €", precioFamiliar: "11,00 €", descripcion: "Tomate, mozzarella, carne picada" },
+      { nombre: "Hawai", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Tomate, mozzarella, piña, jamón halal" },
+      { nombre: "El Atlas", precioNormal: "8,50 €", precioFamiliar: "12,50 €", descripcion: "Tomate, mozzarella, carne de shawarma, champiñones, cebolla" },
+      { nombre: "Carbonara", precioNormal: "8,50 €", precioFamiliar: "12,50 €", descripcion: "Nata, mozzarella, bacon" },
+      { nombre: "Marinera", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Tomate, mozzarella, frutos del mar" },
+      { nombre: "Margarita", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Tomate y mozzarella" },
+      { nombre: "Fungi", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Tomate, mozzarella, champiñones" },
+      { nombre: "Vegetal", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Tomate, mozzarella, champiñones, pimientos, cebolla, aceitunas" },
+      { nombre: "Calzone", precioNormal: "8,50 €", precioFamiliar: "—", descripcion: "Tomate, mozzarella, carne de shawarma, champiñones, pimiento" },
+      { nombre: "Prosciutto", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Tomate, mozzarella, jamón halal" },
+      { nombre: "Peperoni", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Tomate, mozzarella, peperoni" },
+      { nombre: "Napolitana", precioNormal: "7,00 €", precioFamiliar: "11,00 €", descripcion: "Tomate, mozzarella, anchoas, alcaparras, aceitunas" },
+      { nombre: "Shawarma", precioNormal: "8,00 €", precioFamiliar: "12,00 €", descripcion: "Tomate, mozzarella, carne de shawarma" },
+      { nombre: "Pan de Ajo", precioNormal: "6,00 €", precioFamiliar: "—", descripcion: "Tomate, queso, ajo" },
+      { nombre: "Ingredientes Extra", precioNormal: "+1,00 €", precioFamiliar: "+1,00 €" },
+    ]
+  },
+
+  // ─────────────────── ENSALADAS ───────────────────
+  {
+    nombre: "Ensaladas",
+    items: [
+      { nombre: "Mediterranea", precio: "6,00 €", descripcion: "Lechuga, tomate, cebolla, aceituna, atún, remolacha y espárragos" },
+      { nombre: "El Atlas", precio: "7,50 €", descripcion: "Lechuga, tomate, zanahoria, aceituna, mozzarella, maíz y jamón halal" },
+      { nombre: "Shawarma", precio: "8,00 €", descripcion: "Shawarma, lechuga, cebolla, zanahoria, maíz, salsa de yogur" },
+      { nombre: "Frutos del mar", precio: "8,00 €", descripcion: "Lechuga, gambas, bocas de mar, tomate, maíz, salsa rosa" },
+      { nombre: "César", precio: "7,50 €", descripcion: "Lechuga, tomate, queso parmesano, picatoste, pollo a la plancha o lagrimitas, salsa césar" },
+    ]
+  },
+
+  // ─────────────────── PLATOS COMBINADOS ───────────────────
+  {
+    nombre: "Platos Combinados",
+    items: [
+      { nombre: "Plato Shawarma", precio: "9,00 €" },
+      { nombre: "Plato de Filete de Pollo", precio: "8,50 €" },
+      { nombre: "Kapsalon Shawarma", precio: "8,00 €" },
+      {
+        nombre: "Plato Combinado Mixto X2",
+        precio: "9,50 €",
+        descripcion: "Elige 2: Shawarma, Filete de Pollo, Pinchito Pollo, Pinchito Ternera o Pinchito Hígado",
+        opcionesMix: ["Shawarma", "Filete de Pollo", "Pinchito Pollo", "Pinchito Ternera", "Pinchito Hígado"],
+        maxSeleccion: 2
+      },
+      { nombre: "Plato Pinchito Pollo", precio: "8,50 €" },
+      { nombre: "Plato Pinchito Ternera", precio: "9,50 €" },
+      { nombre: "Plato Pinchito Hígado", precio: "9,00 €" },
+    ]
+  },
+
+  // ─────────────────── COMPLEMENTOS Y BEBIDAS ───────────────────
+  {
+    nombre: "Complementos y Bebidas",
+    items: [
+      { nombre: "Alitas de Pollo (x4)", precio: "4,00 €" },
+      { nombre: "Nuggets de Pollo (x5)", precio: "3,00 €" },
+      { nombre: "Lagrimitas de Pollo (x4)", precio: "4,00 €" },
+      { nombre: "Falafel (x3)", precio: "2,50 €" },
+      { nombre: "Patatas", precio: "2,00 €" },
+      { nombre: "Patatas Gratinadas", precio: "3,50 €" },
+      { nombre: "Salsas", precio: "0,50 €" },
+      { nombre: "Refrescos", precio: "1,50 €" },
+      { nombre: "Agua", precio: "1,00 €" },
+      { nombre: "Refrescos Energéticos", precio: "2,50 €" },
+    ]
+  },
+];
 
   return (
     <div className="min-h-screen w-full text-white bg-neutral-950">
