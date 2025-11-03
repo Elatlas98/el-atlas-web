@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>El Atlas — Comida rápida en Torremolinos</title>
+  <meta name="description" content="Hamburguesas, tacos, pizzas, camperos, shawarma y más en Torremolinos. Pedido por WhatsApp 603 133 388." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0a0a0a; --card:#111113; --muted:#9ca3af; }
+    * { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial; }
+    .glass { backdrop-filter: blur(6px); background-color: rgba(15,15,15,0.7); }
+  </style>
+</head>
+<body class="bg-neutral-950 text-neutral-100">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 glass border-b border-neutral-800">
+    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+      <a href="#inicio" class="flex items-center gap-3">
+        <img src="assets/logo.jpg" alt="El Atlas" class="w-12 h-12 rounded-full object-contain bg-black p-1" />
+        <div>
+          <p class="font-black tracking-wide text-lg">EL ATLAS</p>
+          <p class="text-xs text-neutral-400">Comida rápida & parrilla</p>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#menu" class="hover:text-red-400 transition">Menú</a>
+        <a href="#horario" class="hover:text-red-400 transition">Horario</a>
+        <a href="#ubicacion" class="hover:text-red-400 transition">Ubicación</a>
+        <a href="#contacto" class="hover:text-red-400 transition">Contacto</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/34603133388?text=Hola%20El%20Atlas!%20Quiero%20hacer%20un%20pedido%20%C2%A1Gracias!" target="_blank"
+           class="inline-flex items-center gap-2 rounded-2xl px-4 py-2 bg-red-600 hover:bg-red-500 transition shadow-lg shadow-red-900/40 text-sm font-semibold">
+          Pedir por WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="relative">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1521017432531-fbd92d1cfb6a?q=80&w=1920&auto=format&fit=crop')] bg-cover bg-center opacity-20" aria-hidden></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-neutral-950/60 to-neutral-950" aria-hidden></div>
+    <div class="mx-auto max-w-7xl px-4 py-20 md:py-28 relative">
+      <div class="max-w-2xl">
+        <img src="assets/logo.jpg" alt="El Atlas" class="w-28 h-28 object-contain mb-4 rounded-full bg-black p-1">
+        <h1 class="text-4xl md:text-6xl font-black leading-tight">Sabor que ruge, estilo que destaca.</h1>
+        <p class="mt-4 text-neutral-300 md:text-lg">
+          Hamburguesas, tacos, alitas, pizzas, bocadillos, camperos, shawarma y más. Todo con el sello de El Atlas.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#menu" class="rounded-2xl bg-neutral-100 text-neutral-900 px-5 py-3 font-semibold hover:bg-white transition">Ver menú</a>
+          <a href="#ubicacion" class="rounded-2xl border border-neutral-700 px-5 py-3 font-semibold hover:border-neutral-500 transition">Cómo llegar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carta (resumen estructurado con precios Normal/Menú y Pizzas Normal/Familiar) -->
+  <section id="menu" class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="text-3xl md:text-4xl font-black">Carta</h2>
+    <p class="mt-2 text-neutral-400">Precios separados para <span class="font-semibold text-neutral-200">Normal</span> y <span class="font-semibold text-neutral-200">Menú</span>. En pizzas: <span class="font-semibold text-neutral-200">Normal</span> y <span class="font-semibold text-neutral-200">Familiar</span>.</p>
+
+    <!-- Hamburguesas -->
+    <article class="mt-6 rounded-2xl border border-neutral-800 bg-neutral-900/50 overflow-hidden">
+      <header class="px-5 py-4 border-b border-neutral-800">
+        <h3 class="text-2xl font-extrabold">Hamburguesas</h3>
+      </header>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="text-neutral-400">
+            <tr class="border-b border-neutral-800">
+              <th class="text-left px-5 py-3 font-medium">Producto</th>
+              <th class="text-right px-3 py-3 font-medium">Normal</th>
+              <th class="text-right px-5 py-3 font-medium">Menú</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-neutral-800">
+            <tr><td class="px-5 py-3"><p class="font-semibold">Atlas King</p><p class="text-neutral-400">Carne de ternera, lechuga, tomate, cebolla, queso</p></td><td class="px-3 py-3 text-right">5,50 €</td><td class="px-5 py-3 text-right">7,50 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">León Doble</p><p class="text-neutral-400">Doble ternera, doble queso, lechuga, tomate y cebolla</p></td><td class="px-3 py-3 text-right">7,50 €</td><td class="px-5 py-3 text-right">9,50 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">León Fit</p><p class="text-neutral-400">Carne de pollo, lechuga, tomate, cebolla, queso</p></td><td class="px-3 py-3 text-right">5,50 €</td><td class="px-5 py-3 text-right">7,50 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Crispy King</p><p class="text-neutral-400">Pollo crujiente, lechuga, tomate, cebolla, queso</p></td><td class="px-3 py-3 text-right">6,00 €</td><td class="px-5 py-3 text-right">8,00 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Épica Huevo</p><p class="text-neutral-400">Carne de ternera, lechuga, tomate, cebolla, huevo, queso</p></td><td class="px-3 py-3 text-right">6,50 €</td><td class="px-5 py-3 text-right">8,50 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- Camperos -->
+    <article class="mt-6 rounded-2xl border border-neutral-800 bg-neutral-900/50 overflow-hidden">
+      <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Camperos</h3></header>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="text-neutral-400"><tr class="border-b border-neutral-800"><th class="text-left px-5 py-3 font-medium">Producto</th><th class="text-right px-3 py-3 font-medium">Normal</th><th class="text-right px-5 py-3 font-medium">Menú</th></tr></thead>
+          <tbody class="divide-y divide-neutral-800">
+            <tr><td class="px-5 py-3"><p class="font-semibold">Pollo</p><p class="text-neutral-400">Filete de pollo, tomate, lechuga, queso, cebolla, mayonesa</p></td><td class="px-3 py-3 text-right">5,50 €</td><td class="px-5 py-3 text-right">7,50 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">El Atlas</p><p class="text-neutral-400">Filete de pollo, tomate, lechuga, queso, huevo, cebolla, mayonesa</p></td><td class="px-3 py-3 text-right">6,50 €</td><td class="px-5 py-3 text-right">8,50 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Shawarma</p><p class="text-neutral-400">Shawarma, tomate, lechuga, cebolla, salsa de yogur</p></td><td class="px-3 py-3 text-right">6,50 €</td><td class="px-5 py-3 text-right">8,50 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Pinchito de Pollo</p><p class="text-neutral-400">Pinchito de pollo, lechuga, tomate, cebolla, queso</p></td><td class="px-3 py-3 text-right">6,00 €</td><td class="px-5 py-3 text-right">8,00 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Jamón Halal</p><p class="text-neutral-400">Jamón halal, lechuga, tomate, cebolla, queso, mayonesa</p></td><td class="px-3 py-3 text-right">5,50 €</td><td class="px-5 py-3 text-right">7,50 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Shawarma El Atlas</p><p class="text-neutral-400">Shawarma, tomate, lechuga, cebolla, huevo, salsa de yogur, queso</p></td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">9,00 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Atún</p><p class="text-neutral-400">Atún, lechuga, tomate, mayonesa</p></td><td class="px-3 py-3 text-right">5,00 €</td><td class="px-5 py-3 text-right">7,00 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- Ensaladas y combinados -->
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <article class="rounded-2xl border border-neutral-800 bg-neutral-900/50 overflow-hidden">
+        <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Ensaladas</h3></header>
+        <ul class="divide-y divide-neutral-800 text-sm">
+          <li class="flex items-start justify-between gap-4 px-5 py-3"><div><p class="font-semibold">Mediterránea</p><p class="text-neutral-400">Lechuga, tomate, cebolla, aceituna, atún, remolacha y espárragos</p></div><span>6,00 €</span></li>
+          <li class="flex items-start justify-between gap-4 px-5 py-3"><div><p class="font-semibold">El Atlas</p><p class="text-neutral-400">Lechuga, tomate, zanahoria, aceituna, mozzarella, maíz y jamón halal</p></div><span>7,50 €</span></li>
+          <li class="flex items-start justify-between gap-4 px-5 py-3"><div><p class="font-semibold">Shawarma</p><p class="text-neutral-400">Shawarma, lechuga, cebolla, zanahoria, maíz, salsa de yogur</p></div><span>8,00 €</span></li>
+          <li class="flex items-start justify-between gap-4 px-5 py-3"><div><p class="font-semibold">Frutos del mar</p><p class="text-neutral-400">Lechuga, gambas, bocas de mar, tomate, maíz, salsa rosa</p></div><span>8,00 €</span></li>
+          <li class="flex items-start justify-between gap-4 px-5 py-3"><div><p class="font-semibold">César</p><p class="text-neutral-400">Lechuga, tomate, queso parmesano, picatostes, pollo a la plancha o lagrimitas, salsa césar</p></div><span>7,50 €</span></li>
+        </ul>
+      </article>
+
+      <article class="rounded-2xl border border-neutral-800 bg-neutral-900/50 overflow-hidden">
+        <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Platos combinados</h3></header>
+        <ul class="divide-y divide-neutral-800 text-sm">
+          <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Plato Shawarma</span><span>9,00 €</span></li>
+          <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Plato de Filete de Pollo</span><span>8,50 €</span></li>
+          <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Kapsalon Shawarma</span><span>8,50 €</span></li>
+          <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Plato Combinado Mixto X2</span><span>9,50 €</span></li>
+          <li class="px-5 py-3 text-neutral-400">Pinchito (Hígado, Ternera o Pollo a elegir)</li>
+          <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Plato Pinchito Pollo</span><span>8,50 €</span></li>
+          <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Plato Pinchito Ternera</span><span>9,50 €</span></li>
+          <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Plato Pinchito Hígado</span><span>9,00 €</span></li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- Pizzas -->
+    <article class="mt-6 rounded-2xl border border-neutral-800 bg-neutral-900/50 overflow-hidden">
+      <header class="px-5 py-4 border-b border-neutral-800">
+        <h3 class="text-2xl font-extrabold">Pizzas</h3>
+        <p class="text-neutral-400 text-sm">Precios en tamaño Normal / Familiar</p>
+      </header>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="text-neutral-400">
+            <tr class="border-b border-neutral-800">
+              <th class="text-left px-5 py-3 font-medium">Pizza</th>
+              <th class="text-right px-3 py-3 font-medium">Normal</th>
+              <th class="text-right px-5 py-3 font-medium">Familiar</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-neutral-800">
+            <tr><td class="px-5 py-3"><p class="font-semibold">Atún</p><p class="text-neutral-400">Tomate, mozzarella, atún y cebolla</p></td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">4 Quesos</p><p class="text-neutral-400">Tomate, mozzarella, roquefort, gouda, parmesano</p></td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Salmón</p><p class="text-neutral-400">Tomate, mozzarella, lonchas de salmón</p></td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Caprichosa</p><p class="text-neutral-400">Tomate, mozzarella, champiñones, jamón halal, huevo</p></td><td class="px-3 py-3 text-right">7,50 €</td><td class="px-5 py-3 text-right">11,50 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Barbacoa</p><p class="text-neutral-400">Tomate, mozzarella, carne picada, jamón halal, salsa barbacoa</p></td><td class="px-3 py-3 text-right">8,00 €</td><td class="px-5 py-3 text-right">12,00 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Campera</p><p class="text-neutral-400">Tomate, mozzarella, carne picada, cebolla, huevo, pimiento rojo</p></td><td class="px-3 py-3 text-right">8,50 €</td><td class="px-5 py-3 text-right">12,50 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Boloñesa</p><p class="text-neutral-400">Tomate, mozzarella, carne picada</p></td><td class="px-3 py-3 text-right">7,50 €</td><td class="px-5 py-3 text-right">11,50 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Hawaiana</p><p class="text-neutral-400">Tomate, mozzarella, piña, jamón halal</p></td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">El Atlas</p><p class="text-neutral-400">Tomate, mozzarella, carne de shawarma, champiñones, cebolla</p></td><td class="px-3 py-3 text-right">8,50 €</td><td class="px-5 py-3 text-right">12,50 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Carbonara</p><p class="text-neutral-400">Nata, mozzarella, bacon</p></td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Marinera</p><p class="text-neutral-400">Tomate, mozzarella, frutos del mar</p></td><td class="px-3 py-3 text-right">8,50 €</td><td class="px-5 py-3 text-right">12,50 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Margarita</p><p class="text-neutral-400">Tomate, mozzarella</p></td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Fungi</p><p class="text-neutral-400">Tomate, mozzarella, champiñones</p></td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Vegetal</p><p class="text-neutral-400">Tomate, mozzarella, champiñones, pimientos, cebolla, aceitunas</p></td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Calzone</p><p class="text-neutral-400">Tomate, mozzarella, carne de shawarma, champiñones, pimiento</p></td><td class="px-3 py-3 text-right">8,50 €</td><td class="px-5 py-3 text-right">12,50 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Prosciutto</p><p class="text-neutral-400">Tomate, mozzarella, jamón halal</p></td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Peperoni</p><p class="text-neutral-400">Tomate, mozzarella, peperoni</p></td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Napolitana</p><p class="text-neutral-400">Tomate, mozzarella, anchoas, alcaparras, aceitunas</p></td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Shawarma</p><p class="text-neutral-400">Tomate, mozzarella, carne de shawarma</p></td><td class="px-3 py-3 text-right">8,00 €</td><td class="px-5 py-3 text-right">12,00 €</td></tr>
+            <tr><td class="px-5 py-3"><p class="font-semibold">Pan de Ajo</p><p class="text-neutral-400">Tomate, queso, ajo</p></td><td class="px-3 py-3 text-right">6,00 €</td><td class="px-5 py-3 text-right">—</td></tr>
+            <tr><td class="px-5 py-3"><span class="font-semibold">Ingredientes extra</span></td><td class="px-3 py-3 text-right" colspan="2">+1,00 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- Tacos + Bocadillos + Shawarma + Complementos -->
+    <div class="mt-6 grid lg:grid-cols-2 gap-6">
+      <article class="rounded-2xl border border-neutral-800 bg-neutral-900/50 overflow-hidden">
+        <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Tacós</h3></header>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead class="text-neutral-400"><tr class="border-b border-neutral-800"><th class="text-left px-5 py-3 font-medium">Producto</th><th class="text-right px-3 py-3 font-medium">Normal</th><th class="text-right px-5 py-3 font-medium">Menú</th></tr></thead>
+            <tbody class="divide-y divide-neutral-800">
+              <tr><td class="px-5 py-3 font-semibold">Taco de Pollo</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">9,00 €</td></tr>
+              <tr><td class="px-5 py-3 font-semibold">Taco de Nuggets</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">9,00 €</td></tr>
+              <tr><td class="px-5 py-3 font-semibold">Taco de Lagrimita</td><td class="px-3 py-3 text-right">8,00 €</td><td class="px-5 py-3 text-right">10,00 €</td></tr>
+              <tr><td class="px-5 py-3 font-semibold">Taco de Carne Picada</td><td class="px-3 py-3 text-right">8,00 €</td><td class="px-5 py-3 text-right">10,00 €</td></tr>
+              <tr><td class="px-5 py-3 font-semibold">Taco de Shawarma</td><td class="px-3 py-3 text-right">8,00 €</td><td class="px-5 py-3 text-right">10,00 €</td></tr>
+              <tr><td class="px-5 py-3 font-semibold">Taco Mixto (pollo y carne picada)</td><td class="px-3 py-3 text-right">8,50 €</td><td class="px-5 py-3 text-right">10,50 €</td></tr>
+              <tr><td class="px-5 py-3 text-neutral-400">Gratinado</td><td class="px-3 py-3 text-right" colspan="2">+0,50 €</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="rounded-2xl border border-neutral-800 bg-neutral-900/50 overflow-hidden">
+        <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Bocadillos</h3></header>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead class="text-neutral-400"><tr class="border-b border-neutral-800"><th class="text-left px-5 py-3 font-medium">Producto</th><th class="text-right px-3 py-3 font-medium">Normal</th><th class="text-right px-5 py-3 font-medium">Menú</th></tr></thead>
+            <tbody class="divide-y divide-neutral-800">
+              <tr><td class="px-5 py-3 font-semibold">Pollo</td><td class="px-3 py-3 text-right">6,00 €</td><td class="px-5 py-3 text-right">8,00 €</td></tr>
+              <tr><td class="px-5 py-3 font-semibold">Carne de Ternera</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">9,00 €</td></tr>
+              <tr><td class="px-5 py-3 font-semibold">Pinchito de Pollo</td><td class="px-3 py-3 text-right">6,00 €</td><td class="px-5 py-3 text-right">8,00 €</td></tr>
+              <tr><td class="px-5 py-3 font-semibold">Pinchito de Ternera</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">9,50 €</td></tr>
+              <tr><td class="px-5 py-3 font-semibold">Hígado de Ternera</td><td class="px-3 py-3 text-right">7,50 €</td><td class="px-5 py-3 text-right">9,50 €</td></tr>
+              <tr><td class="px-5 py-3 font-semibold">Vegetal</td><td class="px-3 py-3 text-right">5,00 €</td><td class="px-5 py-3 text-right">7,00 €</td></tr>
+              <tr><td class="px-5 py-3 font-semibold">Del Mar</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">9,00 €</td></tr>
+              <tr><td class="px-5 py-3 font-semibold">Atún</td><td class="px-3 py-3 text-right">5,00 €</td><td class="px-5 py-3 text-right">7,00 €</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </div>
+
+    <div class="mt-6 grid lg:grid-cols-2 gap-6">
+      <article class="rounded-2xl border border-neutral-800 bg-neutral-900/50 overflow-hidden">
+        <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Shawarma</h3></header>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead class="text-neutral-400"><tr class="border-b border-neutral-800"><th class="text-left px-5 py-3 font-medium">Producto</th><th class="text-right px-3 py-3 font-medium">Normal</th><th class="text-right px-5 py-3 font-medium">Menú</th></tr></thead>
+            <tbody class="divide-y divide-neutral-800">
+              <tr><td class="px-5 py-3 font-semibold">Rollo Ternera</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">9,00 €</td></tr>
+              <tr><td class="px-5 py-3 font-semibold">Rollo Pollo</td><td class="px-3 py-3 text-right">6,00 €</td><td class="px-5 py-3 text-right">8,00 €</td></tr>
+              <tr><td class="px-5 py-3 font-semibold">Pita Ternera</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">9,00 €</td></tr>
+              <tr><td class="px-5 py-3 font-semibold">Pita Pollo</td><td class="px-3 py-3 text-right">6,00 €</td><td class="px-5 py-3 text-right">8,00 €</td></tr>
+              <tr><td class="px-5 py-3 font-semibold">Rollo Mixto</td><td class="px-3 py-3 text-right">7,50 €</td><td class="px-5 py-3 text-right">9,50 €</td></tr>
+              <tr><td class="px-5 py-3 font-semibold">Pita Mixto</td><td class="px-3 py-3 text-right">7,50 €</td><td class="px-5 py-3 text-right">9,50 €</td></tr>
+              <tr><td class="px-5 py-3 font-semibold">Falafel Rollo o Pita</td><td class="px-3 py-3 text-right">5,50 €</td><td class="px-5 py-3 text-right">7,50 €</td></tr>
+              <tr><td class="px-5 py-3 font-semibold">Lahmacun</td><td class="px-3 py-3 text-right">7,50 €</td><td class="px-5 py-3 text-right">9,50 €</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="rounded-2xl border border-neutral-800 bg-neutral-900/50 overflow-hidden">
+        <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Complementos y Bebidas</h3></header>
+        <ul class="divide-y divide-neutral-800 text-sm">
+          <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Alitas de Pollo X4</span><span>4,00 €</span></li>
+          <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Nuggets de Pollo X5</span><span>3,00 €</span></li>
+          <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Lagrimitas de Pollo X4</span><span>3,00 €</span></li>
+          <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Falafel X3</span><span>2,50 €</span></li>
+          <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Patatas</span><span>2,50 €</span></li>
+          <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Patatas gratinadas</span><span>3,50 €</span></li>
+          <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Salsas</span><span>0,50 €</span></li>
+          <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Refrescos</span><span>1,50 €</span></li>
+          <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Agua</span><span>1,00 €</span></li>
+          <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Refrescos energéticos</span><span>2,50 €</span></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Horario -->
+  <section id="horario" class="bg-neutral-900/60 border-y border-neutral-800">
+    <div class="mx-auto max-w-7xl px-4 py-14 grid md:grid-cols-2 gap-8">
+      <div>
+        <h2 class="text-3xl font-black">Horario</h2>
+        <ul class="mt-4 space-y-2 text-neutral-300">
+          <li class="flex items-center justify-between border-b border-neutral-800 pb-2"><span>Lunes</span><span class="text-neutral-500">Cerrado</span></li>
+          <li class="flex items-center justify-between border-b border-neutral-800 pb-2"><span>Martes - Domingo</span><span>18:00 – 01:30</span></li>
+          <li class="flex items-center justify-between"><span>Servicio a domicilio</span><span>19:30 – 00:00</span></li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border border-neutral-800 p-6 bg-neutral-950">
+        <h3 class="text-xl font-bold">Pedidos y WhatsApp</h3>
+        <p class="text-neutral-400 mt-2">Reparto en Torremolinos (pedido mínimo 15€).</p>
+        <div class="mt-4 flex flex-wrap gap-3">
+          <a href="tel:+34951455043" class="rounded-2xl border border-neutral-800 px-4 py-2 font-semibold hover:border-neutral-600 transition">Llamar: 951 455 043</a>
+          <a href="https://wa.me/34603133388?text=Hola%20El%20Atlas!%20Quiero%20hacer%20un%20pedido%20%C2%A1Gracias!" target="_blank" class="rounded-2xl bg-red-600 hover:bg-red-500 px-4 py-2 font-semibold">WhatsApp: 603 133 388</a>
+          <a href="https://www.instagram.com/_elatlas/" target="_blank" class="rounded-2xl border border-neutral-800 px-4 py-2 font-semibold hover:border-neutral-600 transition">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ubicación -->
+  <section id="ubicacion" class="mx-auto max-w-7xl px-4 py-16">
+    <div class="grid lg:grid-cols-2 gap-8 items-start">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-black">Dónde estamos</h2>
+        <p class="mt-2 text-neutral-400">Calle Eduardo Aguilera Romero n°14 · Torremolinos</p>
+        <div class="mt-5 grid sm:grid-cols-2 gap-4">
+          <div class="rounded-2xl border border-neutral-800 p-5 bg-neutral-900/50">
+            <p class="text-sm text-neutral-400">Ambiente</p>
+            <p class="font-semibold">Madera, negro y rojo. Con el león de El Atlas.</p>
+          </div>
+          <div class="rounded-2xl border border-neutral-800 p-5 bg-neutral-900/50">
+            <p class="text-sm text-neutral-400">Para grupos</p>
+            <p class="font-semibold">Ideal para cenas informales y ver partidos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden border border-neutral-800">
+        <iframe title="Mapa El Atlas" class="w-full h-[380px]" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Calle%20Eduardo%20Aguilera%20Romero%2014&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="bg-neutral-900/60 border-t border-neutral-800">
+    <div class="mx-auto max-w-7xl px-4 py-16 grid md:grid-cols-2 gap-8">
+      <div>
+        <h2 class="text-3xl font-black">Contacto</h2>
+        <ul class="mt-4 space-y-2 text-neutral-300">
+          <li><span class="text-neutral-500">Teléfono:</span> 951 455 043</li>
+          <li><span class="text-neutral-500">WhatsApp:</span> 603 133 388</li>
+          <li><span class="text-neutral-500">Instagram:</span> @_elatlas</li>
+          <li><span class="text-neutral-500">Dirección:</span> Calle Eduardo Aguilera Romero n°14</li>
+        </ul>
+        <p class="mt-6 text-neutral-400 text-sm">¿Quieres envío? Escríbenos por WhatsApp entre 19:30 y 00:00.</p>
+      </div>
+      <form class="rounded-2xl border border-neutral-800 p-6 bg-neutral-950">
+        <label class="block text-sm text-neutral-400">Tu nombre</label>
+        <input class="mt-1 w-full rounded-xl bg-neutral-900 border border-neutral-800 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-600" placeholder=""/>
+        <label class="block text-sm text-neutral-400 mt-4">Tu mensaje</label>
+        <textarea class="mt-1 w-full rounded-xl bg-neutral-900 border border-neutral-800 px-3 py-2 h-28 focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="Quiero reservar…"></textarea>
+        <a href="https://wa.me/34603133388" target="_blank" class="mt-4 w-full inline-flex justify-center rounded-2xl bg-red-600 hover:bg-red-500 px-4 py-2 font-semibold">Enviar por WhatsApp</a>
+        <p class="mt-2 text-xs text-neutral-500">*Formulario demostrativo. Podemos conectarlo a tu WhatsApp o email.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-top border-neutral-800">
+    <div class="mx-auto max-w-7xl px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.jpg" alt="El Atlas" class="w-9 h-9 rounded-full bg-black p-1" />
+        <p class="text-sm text-neutral-400">© <script>document.write(new Date().getFullYear())</script> El Atlas. Todos los derechos reservados.</p>
+      </div>
+      <div class="text-xs text-neutral-500">WhatsApp pedidos: 603 133 388 · Abierto: Mar‑Dom 18:00–01:30 · Envío 19:30–00:00</div>
+    </div>
+  </footer>
+
+  <!-- Mini chat flotante (enlace directo) -->
+  <a href="https://wa.me/34603133388?text=Hola%20El%20Atlas!%20Quiero%20hacer%20un%20pedido%20%C2%A1Gracias!" target="_blank"
+     class="fixed bottom-5 right-5 rounded-full px-5 py-3 bg-red-600 hover:bg-red-500 shadow-xl shadow-red-900/40 font-semibold">
+     Chat El Atlas
+  </a>
+</body>
+</html>
