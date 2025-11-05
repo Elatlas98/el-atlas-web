@@ -3,34 +3,139 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>El Atlas — Logo arreglado</title>
+  <title>El Atlas — Web actualizada</title>
+  <meta name="description" content="El Atlas · Hamburguesas, tacos, alitas, pizzas, bocadillos, camperos y shawarma en Torremolinos.">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial; background:#0b0b0b; color:#f5f5f5; }
-    .glass { backdrop-filter: blur(6px); background: rgba(20,20,20,.8); }
+    *{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    body{background:#0a0a0a;color:#f5f5f5}
+    .glass{backdrop-filter:blur(6px);background:rgba(18,18,18,.8)}
   </style>
 </head>
 <body>
+  <!-- Header: logo arriba a la izquierda -->
   <header class="glass sticky top-0 z-50 border-b border-neutral-800">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-3">
+      <a href="#inicio" class="flex items-center gap-3">
         <img src="assets/logo.jpg" alt="El Atlas" class="w-12 h-12 rounded-full object-cover bg-black p-1" />
         <div>
           <p class="font-black tracking-wide text-lg">EL ATLAS</p>
           <p class="text-xs text-neutral-400">Comida rápida & parrilla</p>
         </div>
-      </div>
+      </a>
       <a href="https://wa.me/34603133388?text=Hola%20El%20Atlas!%20Quiero%20hacer%20un%20pedido" target="_blank"
-         class="bg-red-600 hover:bg-red-500 rounded-2xl px-4 py-2 font-semibold">Pedir por WhatsApp</a>
+         class="bg-red-600 hover:bg-red-500 rounded-2xl px-4 py-2 font-semibold">WhatsApp</a>
     </div>
   </header>
 
-  <section class="max-w-6xl mx-auto px-4 py-10 md:py-14">
-    <h1 class="text-4xl md:text-6xl font-black text-center text-red-600">Sabor que ruge, estilo que destaca.</h1>
+  <!-- Hero -->
+  <section id="inicio" class="relative">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1521017432531-fbd92d1cfb6a?q=80&w=1920&auto=format&fit=crop')] bg-cover bg-center opacity-20"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-neutral-950/60 to-neutral-950"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-16 md:py-20 text-center">
+      <h1 class="text-4xl md:text-6xl font-black text-red-600">Sabor que ruge, estilo que destaca.</h1>
+      <p class="mt-4 text-neutral-300 md:text-lg">Hamburguesas, tacos, alitas, pizzas, bocadillos, camperos, shawarma y más. Todo con el sello de El Atlas.</p>
+      <div class="mt-7 flex justify-center gap-3">
+        <a href="#menu" class="rounded-2xl bg-neutral-100 text-neutral-900 px-5 py-3 font-semibold hover:bg-white">Ver menú</a>
+        <a href="#ubicacion" class="rounded-2xl border border-neutral-700 px-5 py-3 font-semibold hover:border-neutral-500">Cómo llegar</a>
+      </div>
+    </div>
   </section>
 
-  <footer class="border-t border-neutral-800 text-center text-neutral-400 py-6 text-sm">
-    © 2025 El Atlas · @_elatlas
+  <!-- Menú -->
+  <section id="menu" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-3xl md:text-4xl font-black">Carta</h2>
+
+    <!-- Bocadillos (precios corregidos) -->
+    <article class="mt-6 rounded-2xl border border-neutral-800 bg-neutral-900/50 overflow-hidden">
+      <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Bocadillos</h3></header>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="text-neutral-400">
+            <tr class="border-b border-neutral-800">
+              <th class="text-left px-5 py-3 font-medium">Producto</th>
+              <th class="text-right px-3 py-3 font-medium">Normal</th>
+              <th class="text-right px-5 py-3 font-medium">Menú</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-neutral-800">
+            <tr><td class="px-5 py-3 font-semibold">Pollo</td><td class="px-3 py-3 text-right">6,00 €</td><td class="px-5 py-3 text-right">8,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Carne de Ternera</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">9,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Pinchito de Pollo</td><td class="px-3 py-3 text-right">6,00 €</td><td class="px-5 py-3 text-right">8,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Pinchito de Ternera</td><td class="px-3 py-3 text-right">7,50 €</td><td class="px-5 py-3 text-right">9,50 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Hígado de Ternera</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">9,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Vegetal</td><td class="px-3 py-3 text-right">5,00 €</td><td class="px-5 py-3 text-right">7,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Del Mar</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">9,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Atún</td><td class="px-3 py-3 text-right">5,00 €</td><td class="px-5 py-3 text-right">7,00 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- Platos combinados (Kapsalon 8,00 €) -->
+    <article class="mt-6 rounded-2xl border border-neutral-800 bg-neutral-900/50 overflow-hidden">
+      <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Platos combinados</h3></header>
+      <ul class="divide-y divide-neutral-800 text-sm">
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Plato Shawarma</span><span>9,00 €</span></li>
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Plato de Filete de Pollo</span><span>8,50 €</span></li>
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Kapsalon Shawarma</span><span>8,00 €</span></li>
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Plato Combinado Mixto X2</span><span>9,50 €</span></li>
+        <li class="px-5 py-3 text-neutral-400">Pinchito (Hígado, Ternera o Pollo a elegir)</li>
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Plato Pinchito Pollo</span><span>8,50 €</span></li>
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Plato Pinchito Ternera</span><span>9,50 €</span></li>
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Plato Pinchito Hígado</span><span>9,00 €</span></li>
+      </ul>
+    </article>
+
+    <!-- Complementos (Lagrimitas 4 €, Patatas 2 €) -->
+    <article class="mt-6 rounded-2xl border border-neutral-800 bg-neutral-900/50 overflow-hidden">
+      <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Complementos y Bebidas</h3></header>
+      <ul class="divide-y divide-neutral-800 text-sm">
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Alitas de Pollo X4</span><span>4,00 €</span></li>
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Nuggets de Pollo X5</span><span>3,00 €</span></li>
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Lagrimitas de Pollo X4</span><span>4,00 €</span></li>
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Falafel X3</span><span>2,50 €</span></li>
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Patatas</span><span>2,00 €</span></li>
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Patatas gratinadas</span><span>3,50 €</span></li>
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Salsas</span><span>0,50 €</span></li>
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Refrescos</span><span>1,50 €</span></li>
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Agua</span><span>1,00 €</span></li>
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Refrescos energéticos</span><span>2,50 €</span></li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- Ubicación (sin tarjetas de Ambiente/Para grupos) -->
+  <section id="ubicacion" class="max-w-6xl mx-auto px-4 py-12">
+    <h3 class="text-3xl font-bold mb-4">📍 Dónde estamos</h3>
+    <p class="text-neutral-400">Calle Eduardo Aguilera Romero n°14 · Torremolinos</p>
+    <div class="rounded-2xl overflow-hidden border border-neutral-800 mt-4">
+      <iframe title="Mapa El Atlas" class="w-full h-[360px]" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Calle%20Eduardo%20Aguilera%20Romero%2014&output=embed"></iframe>
+    </div>
+  </section>
+
+  <!-- Horario -->
+  <section id="horario" class="bg-neutral-900/60 border-y border-neutral-800">
+    <div class="max-w-6xl mx-auto p-6">
+      <h3 class="text-3xl font-bold mb-2">🕓 Horario</h3>
+      <ul class="space-y-1 text-neutral-300">
+        <li class="flex justify-between"><span>Lunes</span><span class="text-neutral-500">Cerrado</span></li>
+        <li class="flex justify-between"><span>Martes - Domingo</span><span>18:00 – 01:30</span></li>
+        <li class="flex justify-between"><span>Servicio a domicilio</span><span>19:30 – 00:00</span></li>
+      </ul>
+      <p class="text-neutral-400 mt-3">Reparto en Torremolinos (pedido mínimo 15 €). Tel: 951 455 043 · WhatsApp: 603 133 388</p>
+    </div>
+  </section>
+
+  <footer class="border-t border-neutral-800 text-neutral-400 text-center py-6 text-sm">
+    © <script>document.write(new Date().getFullYear())</script> El Atlas · @_elatlas
   </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/34603133388?text=Hola%20El%20Atlas!%20Quiero%20hacer%20un%20pedido" target="_blank"
+     class="fixed bottom-5 right-5 rounded-full px-5 py-3 bg-red-600 hover:bg-red-500 shadow-lg font-semibold">Chat El Atlas</a>
 </body>
 </html>
