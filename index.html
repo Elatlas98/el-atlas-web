@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>El Atlas — Carta completa</title>
-  <meta name="description" content="El Atlas · Hamburguesas, tacos, alitas, pizzas, bocadillos, camperos, shawarma, ensaladas y menús en Torremolinos.">
+  <meta name="description" content="El Atlas · Hamburguesas, tacos, alitas, pizzas, bocadillos, camperos, shawarma, ensaladas y menús. Torremolinos." />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    *{font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,'Helvetica Neue', Arial}
-    body{background:#0a0a0a;color:#f5f5f5}
-    .glass{backdrop-filter:blur(6px);background:rgba(18,18,18,.8)}
-    .card{border:1px solid #262626;background:#11182780;border-radius:1rem;overflow:hidden}
-    .muted{color:#a3a3a3}
-    .price{white-space:nowrap}
+    * { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial; }
+    body { background:#0a0a0a; color:#f5f5f5; }
+    .glass { backdrop-filter: blur(6px); background: rgba(18,18,18,.8); }
+    .card { border:1px solid #262626; background:#11182780; border-radius:1rem; overflow:hidden }
+    .th { color:#a3a3a3 }
+    .price { white-space:nowrap }
+    .badge { background:#dc2626; color:#fff; border-radius:9999px; padding:.2rem .7rem; font-weight:600; font-size:.75rem }
+    a:focus{outline:2px solid #dc2626; outline-offset:2px}
   </style>
 </head>
 <body>
-  <!-- Cabecero con logo arriba a la izquierda -->
+
+  <!-- Header -->
   <header class="glass sticky top-0 z-50 border-b border-neutral-800">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="#inicio" class="flex items-center gap-3">
@@ -31,13 +37,14 @@
     </div>
   </header>
 
-  <!-- Portada -->
+  <!-- Hero -->
   <section id="inicio" class="relative">
-    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1521017432531-fbd92d1cfb6a?q=80&w=1920&auto=format&fit=crop')] bg-cover bg-center opacity-20"></div>
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-neutral-950/60 to-neutral-950"></div>
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1521017432531-fbd92d1cfb6a?q=80&w=1920&auto=format&fit=crop')] bg-cover bg-center opacity-20" aria-hidden></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-neutral-950/60 to-neutral-950" aria-hidden></div>
     <div class="relative max-w-6xl mx-auto px-4 py-14 md:py-20 text-center">
       <h1 class="text-4xl md:text-6xl font-black text-red-600">Sabor que ruge, estilo que destaca.</h1>
       <p class="mt-3 text-neutral-300 md:text-lg">Hamburguesas · Tacos · Alitas · Pizzas · Bocadillos · Camperos · Shawarma · Ensaladas</p>
+      <div class="mt-3"><span class="badge">Pedido mínimo 15 € · Reparto en Torremolinos</span></div>
       <div class="mt-6 flex justify-center gap-3">
         <a href="#menu" class="rounded-2xl bg-neutral-100 text-neutral-900 px-5 py-3 font-semibold hover:bg-white">Ver menú</a>
         <a href="#ubicacion" class="rounded-2xl border border-neutral-700 px-5 py-3 font-semibold hover:border-neutral-500">Cómo llegar</a>
@@ -45,82 +52,131 @@
     </div>
   </section>
 
-  <!-- CARTA -->
+  <!-- Carta -->
   <section id="menu" class="max-w-6xl mx-auto px-4 py-12">
     <h2 class="text-3xl md:text-4xl font-black">Carta</h2>
 
     <!-- HAMBURGUESAS -->
     <article class="card mt-6">
-      <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Hamburguesas</h3></header>
+      <header class="px-5 py-4 border-b border-neutral-800">
+        <h3 class="text-2xl font-extrabold">Hamburguesas</h3>
+        <p class="text-xs text-neutral-400 mt-1">Precios Normal / Menú</p>
+      </header>
       <div class="overflow-x-auto">
         <table class="w-full text-sm">
-          <thead class="muted">
+          <thead class="th">
             <tr class="border-b border-neutral-800">
-              <th class="text-left px-5 py-3 font-medium">Producto</th>
-              <th class="text-right px-3 py-3 font-medium">Normal</th>
-              <th class="text-right px-5 py-3 font-medium">Menú</th>
+              <th class="text-left px-5 py-3">Producto</th>
+              <th class="text-right px-3 py-3">Normal</th>
+              <th class="text-right px-5 py-3">Menú</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-neutral-800">
-            <tr><td class="px-5 py-3 font-semibold">Clásica</td><td class="px-3 py-3 text-right">—</td><td class="px-5 py-3 text-right">—</td></tr>
-            <tr><td class="px-5 py-3 font-semibold">Barbacoa</td><td class="px-3 py-3 text-right">—</td><td class="px-5 py-3 text-right">—</td></tr>
-            <tr><td class="px-5 py-3 font-semibold">Doble queso</td><td class="px-3 py-3 text-right">—</td><td class="px-5 py-3 text-right">—</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Atlas King</td><td class="px-3 py-3 text-right">5,50 €</td><td class="px-5 py-3 text-right">7,50 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">León Doble</td><td class="px-3 py-3 text-right">7,50 €</td><td class="px-5 py-3 text-right">9,50 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">León Fit</td><td class="px-3 py-3 text-right">5,50 €</td><td class="px-5 py-3 text-right">7,50 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Crispy King</td><td class="px-3 py-3 text-right">6,00 €</td><td class="px-5 py-3 text-right">8,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Épica Huevo</td><td class="px-3 py-3 text-right">6,50 €</td><td class="px-5 py-3 text-right">8,50 €</td></tr>
           </tbody>
         </table>
       </div>
     </article>
 
-    <!-- TACOS -->
+    <!-- CAMPEROS -->
     <article class="card mt-6">
-      <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Tacos</h3></header>
-      <ul class="divide-y divide-neutral-800 text-sm">
-        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Pollo</span><span class="price">—</span></li>
-        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Ternera</span><span class="price">—</span></li>
-        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Mixtos</span><span class="price">—</span></li>
-      </ul>
+      <header class="px-5 py-4 border-b border-neutral-800">
+        <h3 class="text-2xl font-extrabold">Camperos</h3>
+        <p class="text-xs text-neutral-400 mt-1">Precios Normal / Menú</p>
+      </header>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="th">
+            <tr class="border-b border-neutral-800">
+              <th class="text-left px-5 py-3">Producto</th>
+              <th class="text-right px-3 py-3">Normal</th>
+              <th class="text-right px-5 py-3">Menú</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-neutral-800">
+            <tr><td class="px-5 py-3 font-semibold">Pollo</td><td class="px-3 py-3 text-right">5,50 €</td><td class="px-5 py-3 text-right">7,50 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">El Atlas</td><td class="px-3 py-3 text-right">6,50 €</td><td class="px-5 py-3 text-right">8,50 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Shawarma</td><td class="px-3 py-3 text-right">6,50 €</td><td class="px-5 py-3 text-right">8,50 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Pinchito de Pollo</td><td class="px-3 py-3 text-right">6,00 €</td><td class="px-5 py-3 text-right">8,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Jamón Halal</td><td class="px-3 py-3 text-right">5,50 €</td><td class="px-5 py-3 text-right">7,50 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Shawarma El Atlas</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">9,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Atún</td><td class="px-3 py-3 text-right">5,00 €</td><td class="px-5 py-3 text-right">7,00 €</td></tr>
+          </tbody>
+        </table>
+      </div>
     </article>
 
-    <!-- ALITAS -->
+    <!-- ENSALADAS -->
     <article class="card mt-6">
-      <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Alitas</h3></header>
+      <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Ensaladas</h3></header>
       <ul class="divide-y divide-neutral-800 text-sm">
-        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Alitas x6</span><span class="price">—</span></li>
-        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Alitas x10</span><span class="price">—</span></li>
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Mediterránea</span><span class="price">6,00 €</span></li>
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">El Atlas</span><span class="price">7,50 €</span></li>
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Shawarma</span><span class="price">8,00 €</span></li>
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Frutos del mar</span><span class="price">8,00 €</span></li>
+        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">César</span><span class="price">7,50 €</span></li>
       </ul>
     </article>
 
     <!-- PIZZAS -->
     <article class="card mt-6">
-      <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Pizzas</h3></header>
+      <header class="px-5 py-4 border-b border-neutral-800">
+        <h3 class="text-2xl font-extrabold">Pizzas</h3>
+        <p class="text-xs text-neutral-400 mt-1">Precios Normal / Familiar</p>
+      </header>
       <div class="overflow-x-auto">
         <table class="w-full text-sm">
-          <thead class="muted">
+          <thead class="th">
             <tr class="border-b border-neutral-800">
-              <th class="text-left px-5 py-3 font-medium">Pizza</th>
-              <th class="text-right px-3 py-3 font-medium">Normal</th>
-              <th class="text-right px-5 py-3 font-medium">Familiar</th>
+              <th class="text-left px-5 py-3">Pizza</th>
+              <th class="text-right px-3 py-3">Normal</th>
+              <th class="text-right px-5 py-3">Familiar</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-neutral-800">
-            <tr><td class="px-5 py-3 font-semibold">Margarita</td><td class="px-3 py-3 text-right">—</td><td class="px-5 py-3 text-right">—</td></tr>
-            <tr><td class="px-5 py-3 font-semibold">Barbacoa</td><td class="px-3 py-3 text-right">—</td><td class="px-5 py-3 text-right">—</td></tr>
-            <tr><td class="px-5 py-3 font-semibold">Hawaiana</td><td class="px-3 py-3 text-right">—</td><td class="px-5 py-3 text-right">—</td></tr>
-            <tr><td class="px-5 py-3 font-semibold">Cuatro Quesos</td><td class="px-3 py-3 text-right">—</td><td class="px-5 py-3 text-right">—</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Atún</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">4 Quesos</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Salmón</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Caprichosa</td><td class="px-3 py-3 text-right">7,50 €</td><td class="px-5 py-3 text-right">11,50 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Barbacoa</td><td class="px-3 py-3 text-right">8,00 €</td><td class="px-5 py-3 text-right">12,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Campera</td><td class="px-3 py-3 text-right">8,50 €</td><td class="px-5 py-3 text-right">12,50 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Boloñesa</td><td class="px-3 py-3 text-right">7,50 €</td><td class="px-5 py-3 text-right">11,50 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Hawai</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">El Atlas</td><td class="px-3 py-3 text-right">8,50 €</td><td class="px-5 py-3 text-right">12,50 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Carbonara</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Marinera</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Margarita</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Fungi</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Vegetal</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Calzone</td><td class="px-3 py-3 text-right">8,50 €</td><td class="px-5 py-3 text-right">12,50 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Prosciutto</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Peperoni</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Napolitana</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">11,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Shawarma</td><td class="px-3 py-3 text-right">8,00 €</td><td class="px-5 py-3 text-right">12,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Pan de Ajo</td><td class="px-3 py-3 text-right">6,00 €</td><td class="px-5 py-3 text-right">—</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Ingredientes Extra</td><td class="px-3 py-3 text-right">+1,00 €</td><td class="px-5 py-3 text-right">+1,00 €</td></tr>
           </tbody>
         </table>
       </div>
     </article>
 
-    <!-- BOCADILLOS (con precios confirmados) -->
+    <!-- BOCADILLOS -->
     <article class="card mt-6">
-      <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Bocadillos</h3></header>
+      <header class="px-5 py-4 border-b border-neutral-800">
+        <h3 class="text-2xl font-extrabold">Bocadillos</h3>
+        <p class="text-xs text-neutral-400 mt-1">Precios Normal / Menú</p>
+      </header>
       <div class="overflow-x-auto">
         <table class="w-full text-sm">
-          <thead class="muted">
+          <thead class="th">
             <tr class="border-b border-neutral-800">
-              <th class="text-left px-5 py-3 font-medium">Producto</th>
-              <th class="text-right px-3 py-3 font-medium">Normal</th>
-              <th class="text-right px-5 py-3 font-medium">Menú</th>
+              <th class="text-left px-5 py-3">Producto</th>
+              <th class="text-right px-3 py-3">Normal</th>
+              <th class="text-right px-5 py-3">Menú</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-neutral-800">
@@ -137,43 +193,61 @@
       </div>
     </article>
 
-    <!-- CAMPEROS -->
-    <article class="card mt-6">
-      <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Camperos</h3></header>
-      <ul class="divide-y divide-neutral-800 text-sm">
-        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Pollo</span><span class="price">—</span></li>
-        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Ternera</span><span class="price">—</span></li>
-      </ul>
-    </article>
-
-    <!-- SHAWARMA -->
+    <!-- SHAWARMA (rollo/pita) -->
     <article class="card mt-6">
       <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Shawarma</h3></header>
-      <ul class="divide-y divide-neutral-800 text-sm">
-        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Durum Pollo</span><span class="price">—</span></li>
-        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Durum Ternera</span><span class="price">—</span></li>
-      </ul>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="th">
+            <tr class="border-b border-neutral-800">
+              <th class="text-left px-5 py-3">Producto</th>
+              <th class="text-right px-3 py-3">Normal</th>
+              <th class="text-right px-5 py-3">Menú</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-neutral-800">
+            <tr><td class="px-5 py-3 font-semibold">Rollo Ternera</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">9,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Rollo Pollo</td><td class="px-3 py-3 text-right">6,00 €</td><td class="px-5 py-3 text-right">8,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Pita Ternera</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">9,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Pita Pollo</td><td class="px-3 py-3 text-right">6,00 €</td><td class="px-5 py-3 text-right">8,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Rollo Mixto</td><td class="px-3 py-3 text-right">7,50 €</td><td class="px-5 py-3 text-right">9,50 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Pita Mixto</td><td class="px-3 py-3 text-right">7,50 €</td><td class="px-5 py-3 text-right">9,50 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Falafel Rollo o Pita</td><td class="px-3 py-3 text-right">5,50 €</td><td class="px-5 py-3 text-right">7,50 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Lahmacun</td><td class="px-3 py-3 text-right">7,50 €</td><td class="px-5 py-3 text-right">9,50 €</td></tr>
+          </tbody>
+        </table>
+      </div>
     </article>
 
-    <!-- ENSALADAS -->
+    <!-- TACOS -->
     <article class="card mt-6">
-      <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Ensaladas</h3></header>
-      <ul class="divide-y divide-neutral-800 text-sm">
-        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">César</span><span class="price">—</span></li>
-        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Mixta</span><span class="price">—</span></li>
-      </ul>
+      <header class="px-5 py-4 border-b border-neutral-800">
+        <h3 class="text-2xl font-extrabold">Tacos</h3>
+        <p class="text-xs text-neutral-400 mt-1">Precios Normal / Menú</p>
+      </header>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="th">
+            <tr class="border-b border-neutral-800">
+              <th class="text-left px-5 py-3">Producto</th>
+              <th class="text-right px-3 py-3">Normal</th>
+              <th class="text-right px-5 py-3">Menú</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-neutral-800">
+            <tr><td class="px-5 py-3 font-semibold">Taco de Pollo</td><td class="px-3 py-3 text-right">7,00 €</td><td class="px-5 py-3 text-right">9,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Taco de Nuggets</td><td class="px-3 py-3 text-right">8,00 €</td><td class="px-5 py-3 text-right">10,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Taco de Lagrimita</td><td class="px-3 py-3 text-right">8,00 €</td><td class="px-5 py-3 text-right">10,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Taco de Carne Picada</td><td class="px-3 py-3 text-right">8,00 €</td><td class="px-5 py-3 text-right">10,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Taco de Shawarma</td><td class="px-3 py-3 text-right">8,00 €</td><td class="px-5 py-3 text-right">10,00 €</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Taco Mixto (pollo y carne picada)</td><td class="px-3 py-3 text-right">8,50 €</td><td class="px-5 py-3 text-right">10,50 €</td></tr>
+            <tr><td class="px-5 py-3 text-neutral-400">Gratinado</td><td class="px-3 py-3 text-right">+0,50 €</td><td class="px-5 py-3 text-right">+0,50 €</td></tr>
+          </tbody>
+        </table>
+      </div>
     </article>
 
-    <!-- MENÚS CON PATATAS FRITAS -->
-    <article class="card mt-6">
-      <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Menús con patatas fritas</h3></header>
-      <ul class="divide-y divide-neutral-800 text-sm">
-        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Menú 1</span><span class="price">—</span></li>
-        <li class="flex items-center justify-between px-5 py-3"><span class="font-semibold">Menú 2</span><span class="price">—</span></li>
-      </ul>
-    </article>
-
-    <!-- PLATOS COMBINADOS (confirmado) -->
+    <!-- PLATOS COMBINADOS -->
     <article class="card mt-6">
       <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Platos combinados</h3></header>
       <ul class="divide-y divide-neutral-800 text-sm">
@@ -188,7 +262,7 @@
       </ul>
     </article>
 
-    <!-- COMPLEMENTOS Y BEBIDAS (confirmado) -->
+    <!-- COMPLEMENTOS Y BEBIDAS -->
     <article class="card mt-6">
       <header class="px-5 py-4 border-b border-neutral-800"><h3 class="text-2xl font-extrabold">Complementos y Bebidas</h3></header>
       <ul class="divide-y divide-neutral-800 text-sm">
@@ -206,7 +280,7 @@
     </article>
   </section>
 
-  <!-- UBICACIÓN -->
+  <!-- Ubicación -->
   <section id="ubicacion" class="max-w-6xl mx-auto px-4 py-12">
     <h3 class="text-3xl font-bold mb-4">📍 Dónde estamos</h3>
     <p class="text-neutral-400">Calle Eduardo Aguilera Romero n°14 · Torremolinos</p>
@@ -215,7 +289,7 @@
     </div>
   </section>
 
-  <!-- HORARIO -->
+  <!-- Horario -->
   <section id="horario" class="bg-neutral-900/60 border-y border-neutral-800">
     <div class="max-w-6xl mx-auto p-6">
       <h3 class="text-3xl font-bold mb-2">🕓 Horario</h3>
@@ -224,7 +298,7 @@
         <li class="flex justify-between"><span>Martes - Domingo</span><span>18:00 – 01:30</span></li>
         <li class="flex justify-between"><span>Servicio a domicilio</span><span>19:30 – 00:00</span></li>
       </ul>
-      <p class="text-neutral-400 mt-3">Reparto en Torremolinos (pedido mínimo 15 €). Tel: 951 455 043 · WhatsApp: 603 133 388</p>
+      <p class="text-neutral-400 mt-3">Reparto en Torremolinos (pedido mínimo 15 €). Tel: 951 455 043 · WhatsApp: 603 133 388 · Instagram: @_elatlas</p>
     </div>
   </section>
 
@@ -232,8 +306,80 @@
     © <script>document.write(new Date().getFullYear())</script> El Atlas · @_elatlas
   </footer>
 
-  <!-- Botón flotante WhatsApp -->
+  <!-- Botón flotante WhatsApp (CTA rápido) -->
   <a href="https://wa.me/34603133388?text=Hola%20El%20Atlas!%20Quiero%20hacer%20un%20pedido" target="_blank"
      class="fixed bottom-5 right-5 rounded-full px-5 py-3 bg-red-600 hover:bg-red-500 shadow-lg font-semibold">Chat El Atlas</a>
+
+  <!-- Chatbot sencillo con respuestas automáticas + derivación a WhatsApp -->
+  <button id="bot-toggle" aria-label="Abrir chat" class="fixed bottom-5 left-5 rounded-full p-3 bg-neutral-800 border border-neutral-700 shadow">🤖</button>
+  <div id="bot-panel" class="hidden fixed bottom-20 left-5 w-80 max-w-[90vw] bg-neutral-900 border border-neutral-800 rounded-2xl shadow-lg overflow-hidden">
+    <div class="px-4 py-3 border-b border-neutral-800 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <img src="assets/logo.jpg" class="w-6 h-6 rounded-full" alt="El Atlas" />
+        <p class="font-semibold">Chat El Atlas</p>
+      </div>
+      <button id="bot-close" aria-label="Cerrar" class="text-neutral-400 hover:text-white">✕</button>
+    </div>
+    <div id="bot-messages" class="h-64 overflow-y-auto p-3 space-y-2 text-sm">
+      <div class="bg-neutral-800 rounded-xl p-2 w-fit max-w-[85%]">¡Hola! 👋 Soy el asistente de El Atlas. ¿En qué te ayudo?</div>
+    </div>
+    <div class="p-3 border-t border-neutral-800 space-y-2">
+      <div class="grid grid-cols-2 gap-2">
+        <button data-msg="Quiero hacer un pedido" class="bot-quick bg-neutral-800 hover:bg-neutral-700 rounded-xl px-3 py-2">Hacer pedido</button>
+        <button data-msg="¿Cuál es el horario?" class="bot-quick bg-neutral-800 hover:bg-neutral-700 rounded-xl px-3 py-2">Horario</button>
+        <button data-msg="¿Dónde estáis?" class="bot-quick bg-neutral-800 hover:bg-neutral-700 rounded-xl px-3 py-2">Dirección</button>
+        <button data-msg="Hablar con una persona" class="bot-quick bg-neutral-800 hover:bg-neutral-700 rounded-xl px-3 py-2">Hablar</button>
+      </div>
+      <a id="bot-wa" href="https://wa.me/34603133388?text=Hola%20El%20Atlas!%20Quiero%20hacer%20un%20pedido" target="_blank"
+         class="block text-center bg-red-600 hover:bg-red-500 rounded-xl px-3 py-2 font-semibold">Continuar en WhatsApp</a>
+    </div>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('bot-toggle');
+    const panel = document.getElementById('bot-panel');
+    const closeBtn = document.getElementById('bot-close');
+    const messages = document.getElementById('bot-messages');
+    const quicks = document.querySelectorAll('.bot-quick');
+    const wa = document.getElementById('bot-wa');
+
+    function addMsg(text, from='user'){
+      const bubble = document.createElement('div');
+      bubble.className = from==='user' ? 'bg-red-600 text-white rounded-xl p-2 w-fit max-w-[85%] ml-auto' : 'bg-neutral-800 rounded-xl p-2 w-fit max-w-[85%]';
+      bubble.textContent = text;
+      messages.appendChild(bubble);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function replyTo(text){
+      let reply = '';
+      if(text.includes('pedido')){
+        reply = 'Perfecto 🦁 Dime qué te apetece o pulsa “Continuar en WhatsApp”.';
+        wa.href = 'https://wa.me/34603133388?text=Hola%20El%20Atlas!%20Quiero%20hacer%20un%20pedido';
+      } else if(text.includes('horario')){
+        reply = 'Abrimos de martes a domingo de 18:00 a 01:30. Lunes cerrado. Envíos 19:30 a 00:00.';
+        wa.href = 'https://wa.me/34603133388?text=Hola!%20%C2%BFEl%20horario%2C%20por%20favor%3F';
+      } else if(text.includes('dónde') || text.toLowerCase().includes('donde') || text.includes('dirección')){
+        reply = 'Estamos en Calle Eduardo Aguilera Romero n°14, Torremolinos. ¿Te paso ubicación por WhatsApp?';
+        wa.href = 'https://wa.me/34603133388?text=Hola!%20P%C3%A1same%20la%20ubicaci%C3%B3n%2C%20por%20favor.';
+      } else if(text.includes('persona') || text.includes('hablar')){
+        reply = 'Te paso con el equipo 👩‍🍳👨‍🍳 Responde por WhatsApp y te atienden ahora mismo.';
+        wa.href = 'https://wa.me/34603133388?text=Hola!%20Quiero%20hablar%20con%20una%20persona.';
+      } else {
+        reply = 'Puedo ayudarte con pedidos, horario y ubicación. También puedo pasarte con el equipo por WhatsApp.';
+        wa.href = 'https://wa.me/34603133388?text=Hola%20El%20Atlas!';
+      }
+      addMsg(reply, 'bot');
+    }
+
+    toggle.addEventListener('click', () => panel.classList.toggle('hidden'));
+    closeBtn.addEventListener('click', () => panel.classList.add('hidden'));
+    quicks.forEach(btn => btn.addEventListener('click', () => {
+      const text = btn.getAttribute('data-msg');
+      addMsg(text, 'user');
+      setTimeout(() => replyTo(text.toLowerCase()), 300);
+    }));
+  </script>
+
 </body>
 </html>
