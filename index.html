@@ -23,8 +23,8 @@
   <!-- Header -->
   <header class="glass sticky top-0 z-50 border-b border-neutral-800">
     <span id="visitas-badge" class="hidden md:inline-flex items-center gap-2 px-3 py-1 rounded-2xl border border-neutral-700 text-sm">
-  👀 <span id="visitas-total">—</span>
-</span>
+      👀 <span id="visitas-total">—</span>
+    </span>
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="#inicio" class="flex items-center gap-3">
         <img src="assets/logo.jpg" alt="El Atlas" class="w-12 h-12 rounded-full object-cover bg-black p-1" />
@@ -387,6 +387,23 @@
 
     closeBtn.addEventListener('click', () => panel.remove());
   </script>
-
+<script>
+  (function(){
+    const BADGE = document.getElementById('visitas-badge');
+    const TOTAL = document.getElementById('visitas-total');
+    const NAMESPACE = 'elatlasrestaurante_es';
+    const KEY = 'home';
+    fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`)
+      .then(r => r.json())
+      .then(data => {
+        if (TOTAL) TOTAL.textContent = new Intl.NumberFormat('es-ES').format(data.value);
+        if (BADGE) BADGE.classList.remove('hidden');
+      })
+      .catch(() => {
+        if (TOTAL) TOTAL.textContent = '0';
+        if (BADGE) BADGE.classList.remove('hidden');
+      });
+  })();
+</script>
 </body>
 </html>
