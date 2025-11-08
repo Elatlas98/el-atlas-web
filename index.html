@@ -319,7 +319,16 @@
   <div id="bot-panel" class="fixed bottom-20 left-5 w-80 max-w-[90vw] bg-neutral-900 border border-neutral-800 rounded-2xl shadow-lg overflow-hidden">
     <div class="px-4 py-3 border-b border-neutral-800 flex items-center justify-between">
       <div class="flex items-center gap-2">
-        <img src="assets/logo.jpg" class="w-6 h-6 rounded-full" alt="El Atlas" />
+        <img
+          src="./assets/logo.jpg"
+          alt="El Atlas"
+          class="w-12 h-12 rounded-full object-cover bg-black p-1"
+          onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,\
+          <svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;96&quot; height=&quot;96&quot; viewBox=&quot;0 0 96 96&quot;>\
+            <rect width=&quot;96&quot; height=&quot;96&quot; rx=&quot;16&quot; fill=&quot;#111&quot;/>\
+           <text x=&quot;50%&quot; y=&quot;52%&quot; dominant-baseline=&quot;middle&quot; text-anchor=&quot;middle&quot; font-family=&quot;Arial, sans-serif&quot; font-size=&quot;34&quot; font-weight=&quot;700&quot; fill=&quot;#fff&quot;>EA</text>\
+         </svg>'"
+       />
         <p class="font-semibold">Chat El Atlas</p>
       </div>
       <button id="bot-close" aria-label="Cerrar" class="text-neutral-400 hover:text-white">✕</button>
