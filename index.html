@@ -111,13 +111,17 @@
   </div>
   
   <!-- Chatbot abierto por defecto -->
-  <div id="bot-panel" class="fixed bottom-20 left-5 w-80 max-w-[90vw] bg-neutral-900 border border-neutral-800 rounded-2xl shadow-lg overflow-hidden">
+  <div id="bot-panel" class="hidden fixed bottom-20 left-4 right-4 ...">
     <div class="px-4 py-3 border-b border-neutral-800 flex items-center justify-between">
       <div class="flex items-center gap-2">
         <img src="logo.png" alt="El Atlas" class="w-12 h-12 rounded-full object-cover bg-black p-1" />
         <p class="font-semibold">Chat El Atlas</p>
       </div>
       <button id="bot-close" aria-label="Cerrar" class="text-neutral-400 hover:text-white">✕</button>
+      <button id="bot-open"
+        class="fixed bottom-6 right-6 bg-red-600 text-white px-4 py-3 rounded-full shadow-lg flex items-center gap-2">
+    💬 Chat El Atlas
+</button>
     </div>
     <div id="bot-messages" class="h-64 overflow-y-auto p-3 space-y-2 text-sm">
       <div class="bg-neutral-800 rounded-xl p-2 w-fit max-w-[85%]">
@@ -470,6 +474,21 @@
         if (BADGE) BADGE.classList.remove('hidden');
       });
   })();
+</script>
+  <script>
+const botPanel = document.getElementById("bot-panel");
+const botOpen = document.getElementById("bot-open");
+const botClose = document.getElementById("bot-close");
+
+botOpen.addEventListener("click", () => {
+    botPanel.classList.remove("hidden");  // Muestra el chatbot
+    botOpen.classList.add("hidden");      // Oculta el botón pequeño
+});
+
+botClose.addEventListener("click", () => {
+    botPanel.classList.add("hidden");     // Oculta el chatbot
+    botOpen.classList.remove("hidden");   // Muestra el botón flotante
+});
 </script>
 </body>
 </html>
